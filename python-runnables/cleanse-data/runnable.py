@@ -1,6 +1,8 @@
 from dataiku.runnables import Runnable
 from k8s_monitoring.cleanse_data import main
 
+from datetime import datetime
+
 
 class MyRunnable(Runnable):
     """The base interface for a Python runnable"""
