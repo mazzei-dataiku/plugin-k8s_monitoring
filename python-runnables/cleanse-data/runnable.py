@@ -23,9 +23,6 @@ class MyRunnable(Runnable):
         return None
 
     def run(self, progress_callback):
-        """
-        Do stuff here. Can return a string or raise an exception.
-        The progress_callback is a function expecting 1 value: current progress
-        """
-        raise Exception("unimplemented")
+        output = main.poll_data()
+        return output
         
