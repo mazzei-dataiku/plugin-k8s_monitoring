@@ -1,5 +1,5 @@
 from dataiku.runnables import Runnable
-from k8s_monitoring.poll_data import main
+from k8s_monitoring.cleanse_data import main
 
 
 class MyRunnable(Runnable):
@@ -23,6 +23,17 @@ class MyRunnable(Runnable):
         return None
 
     def run(self, progress_callback):
-        output = main.poll_data()
+        k8s_monitoring = dataiku.Folder("CjgexdB8", ignore_flow=True)
+        k8s_monitoring_cleansed = dataiku.Folder("7HBKWZDX")
+
+        dt = datetime.utcnow()
+        dt_year  = str(dt.year)
+        dt_month = str(f'{dt.month:02d}')
+        dt_day   = str(f'{dt.day:02d}')
+
+        cleanse_data("incoming|cluster_data")
+        cleanse_data("incoming|nodegroup_data")
+        cleanse_data("incoming|pod_status")
+        cleanse_data("incoming|nodegroup_status")
         return output
         
