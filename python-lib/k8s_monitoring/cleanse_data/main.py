@@ -8,8 +8,6 @@ from dataiku import pandasutils as pdu
 from datetime import datetime
 
 
-
-
 def cleanse_data(partition):
     # get some values
     mode, data = partition.split("|")
