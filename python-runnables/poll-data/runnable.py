@@ -23,6 +23,6 @@ class MyRunnable(Runnable):
         return None
 
     def run(self, progress_callback):
-        main.poll_data()
-        raise Exception("unimplemented")
+        output = main.poll_data()
+        return output
         
