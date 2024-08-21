@@ -10,6 +10,12 @@ def get_folder():
             project_key=dataiku.default_project_key(),
             ignore_flow=True
     )
+    
+    try:
+        folder.get_id()
+    except:
+        folder_handle = project.create_managed_folder(name="testing", connection_name="filesystem_folders")
+        folder = dataiku.Folder(lookup="testing", ignore_flow=True, project_key=dataiku.default_project_key())
     return folder
 
 
