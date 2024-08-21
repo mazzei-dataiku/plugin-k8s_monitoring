@@ -9,7 +9,7 @@ def get_folder(folder_name):
     try:
         folder.get_id()
     except:
-        folder_handle = project.create_managed_folder(name=folder_name, connection_name="filesystem_folders")
+        folder_handle = project.create_managed_folder(name=folder_name, connection_name=folder_conn)
         folder = dataiku.Folder(lookup=folder_name, ignore_flow=True, project_key=dataiku.default_project_key())
     return folder
 
