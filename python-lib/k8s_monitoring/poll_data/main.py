@@ -11,7 +11,7 @@ def poll_data():
     # Load config variables
     dt = config.dt
     folder_name = config.raw_folder_name
-    folder_type = config.folder_type
+    folder_type = config.raw_folder_type
     
     # Cluster Information
     name = "cluster_data"
