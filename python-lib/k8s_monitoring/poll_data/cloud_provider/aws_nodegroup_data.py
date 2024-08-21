@@ -33,7 +33,7 @@ def get_data(dt):
         
         try:
             gpu_count = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["Count"]
-            gpu_cpu = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["Count"]
+            gpu_cpu = 0
             gpu_memory = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["MemoryInfo"]["SizeInMiB"]
         except:
             gpu_count = 0
