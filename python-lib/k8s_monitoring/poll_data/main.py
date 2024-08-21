@@ -12,7 +12,7 @@ def poll_data():
     dt = config.dt
     
     # mode type
-    mode = "incoming"
+    mode = config.folder_type
     
     # Cluster Information
     # name = "cluster_data"
