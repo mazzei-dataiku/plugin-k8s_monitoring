@@ -12,7 +12,8 @@
             "label": "Kubernetes Cleansed Folder",
             "arity": "UNARY",
             "required": true,
-            "acceptsDataset": false
+            "acceptsDataset": false,
+            "acceptsManagedFolder": true
         }
     ],
     "params": [],
