@@ -11,8 +11,8 @@ from datetime import datetime
 def cleanse_data(partition):
     # get some values
     mode, data = partition.split("|")
-    k8s_monitoring = folder = get_folder(config.folder_name, config.folder_conn)
-    k8s_monitoring_cleansed = folder = get_folder(config.folder_name, config.folder_conn)
+    raw_folder = folder = get_folder(config.raw_folder_name)
+    cleansed_folder = folder = get_folder(config.cleanse_folder_name)
 
     # Date time stuff
     dt = datetime.utcnow()
