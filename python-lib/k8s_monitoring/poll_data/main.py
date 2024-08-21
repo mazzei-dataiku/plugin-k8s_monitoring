@@ -24,12 +24,12 @@ def poll_data():
     
     # Pod Status
     name = "pod_status"
-    pods_df = pod_status.get_data(dt, cluster_name, data_dir)
+    pods_df = pod_status.get_data(dt)
     helper.save_data_folder(dt, name, pods_df, folder_type)    
     
     # Node Status
     name = "nodegroup_status"
-    ngs_df = nodegroup_status.get_data(dt, cluster_name, data_dir, pods_df)
+    ngs_df = nodegroup_status.get_data(dt, pods_df)
     helper.save_data_folder(dt, name, ngs_df, folder_type)
     
     return "FINISH"
