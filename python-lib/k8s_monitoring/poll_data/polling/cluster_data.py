@@ -8,6 +8,7 @@ def get_data(dt):
         from k8s_monitoring.poll_data.cloud_provider import get_data
         df = get_data(dt)
         return df
+    
     elif cluster_type == "Azure":
         return 123
     elif cluster_type == "GCP":
