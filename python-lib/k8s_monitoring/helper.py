@@ -4,9 +4,9 @@ import pandas as pd
 import io  
 
 
-def get_folder():
+def get_folder(folder_name):
     folder = dataiku.Folder(
-            lookup=config.folder_id, 
+            lookup=folder_name, 
             project_key=dataiku.default_project_key(),
             ignore_flow=True
     )
@@ -14,8 +14,8 @@ def get_folder():
     try:
         folder.get_id()
     except:
-        folder_handle = project.create_managed_folder(name="testing", connection_name="filesystem_folders")
-        folder = dataiku.Folder(lookup="testing", ignore_flow=True, project_key=dataiku.default_project_key())
+        folder_handle = project.create_managed_folder(name=folder_name, connection_name="filesystem_folders")
+        folder = dataiku.Folder(lookup=folder_name, ignore_flow=True, project_key=dataiku.default_project_key())
     return folder
 
 
@@ -34,7 +34,7 @@ def save_data_folder(dt, name, df, mode=None):
         path   = f'/{mode}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
     # Get folder
-    folder = get_folder()
+    folder = get_folder(config.folder_name)
     
     # We want to append to the daily log
     try:
