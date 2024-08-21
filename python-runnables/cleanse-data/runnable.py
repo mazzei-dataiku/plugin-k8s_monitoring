@@ -23,13 +23,7 @@ class MyRunnable(Runnable):
         return None
 
     def run(self, progress_callback):
-        k8s_monitoring = dataiku.Folder("CjgexdB8", ignore_flow=True)
-        k8s_monitoring_cleansed = dataiku.Folder("7HBKWZDX")
 
-        dt = datetime.utcnow()
-        dt_year  = str(dt.year)
-        dt_month = str(f'{dt.month:02d}')
-        dt_day   = str(f'{dt.day:02d}')
 
         main.cleanse_data("incoming|cluster_data")
         main.cleanse_data("incoming|nodegroup_data")
