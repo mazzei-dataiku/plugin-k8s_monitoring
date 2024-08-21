@@ -1,4 +1,4 @@
-from .helper import load_yaml
+from k8s_monitoring.poll_data import config
 
 import pandas as pd
 import boto3
