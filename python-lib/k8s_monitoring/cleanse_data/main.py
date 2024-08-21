@@ -55,6 +55,7 @@ def cleanse_data(partition):
         
         ## Delete the original
         raw_folder.delete_path(path=csv)
+    
     return True
 
 # EOF
