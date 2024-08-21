@@ -1,4 +1,4 @@
-from k8s_monitoring.poll_data import config
+from k8s_monitoring import config
 from k8s_monitoring import helper
 
 from k8s_monitoring.poll_data.polling import cluster_data
