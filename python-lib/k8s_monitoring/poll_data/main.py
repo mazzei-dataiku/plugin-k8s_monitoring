@@ -31,10 +31,10 @@ def poll_data():
     name = "pod_status"
     try:
         pods_df = pod_status.get_data(dt, cluster_name, data_dir)
+        helper.save_data_folder(dt, name, pods_df, mode)
     except Exception as e:
         return e
         
-    # helper.save_data_folder(dt, name, pods_df, mode)
     
     # Node Status
     # name = "nodegroup_status"
