@@ -6,7 +6,15 @@
     },
     "kind": "PYTHON",
     "inputRoles": [],
-    "outputRoles": [],
+    "outputRoles": [
+        {
+            "name": "text",
+            "label": "Transcribed text",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
     "params": [],
     "resourceKeys": []
 }
