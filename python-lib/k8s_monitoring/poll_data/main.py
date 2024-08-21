@@ -12,7 +12,7 @@ def poll_data():
     data_dir = config.data_dir
     project_id = config.project_id
     zone = config.zone
-    cluster = config.cluster
+    cluster_name = config.cluster_name
     
     # mode type
     mode = "incoming"
@@ -30,7 +30,7 @@ def poll_data():
     # Pod Status
     name = "pod_status"
     try:
-        pods_df = pod_status.get_data(dt, cluster, data_dir)
+        pods_df = pod_status.get_data(dt, cluster_name, data_dir)
     except Exception as e:
         return e
         
