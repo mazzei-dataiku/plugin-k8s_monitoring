@@ -27,7 +27,6 @@ pod_cleansed_cols = [
 # Cluster Information
 cluster = 'gke-mazzei'
 
-
 # File Folder save information
 file_ext = 'csv'
 folder_id = 'k8s_monitoring'
