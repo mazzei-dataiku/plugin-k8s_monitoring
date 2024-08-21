@@ -1,5 +1,6 @@
-# This file is the actual code for the Python runnable cleanse-data
 from dataiku.runnables import Runnable
+from k8s_monitoring.poll_data import main
+
 
 class MyRunnable(Runnable):
     """The base interface for a Python runnable"""
