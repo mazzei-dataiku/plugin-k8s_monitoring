@@ -7,7 +7,6 @@ from k8s_monitoring.modules import pod_cleanse
 from k8s_monitoring.modules import nodegroup_cleanse
 
 
-
 def cleanse_data(partition):
     # get some values
     mode, data = partition.split("|")
