@@ -6,7 +6,7 @@ import boto3
 
 def get_data(dt):
     aws_region = config.aws_region
-    cluster_name = config.clsuter_name
+    cluster_name = config.cluster_name
     
     eks = boto3.client("eks", region_name=aws_region)
     ec2 = boto3.client("ec2", region_name=aws_region)
