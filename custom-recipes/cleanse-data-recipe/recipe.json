@@ -5,7 +5,17 @@
         "icon": "fas fa-puzzle-piece"
     },
     "kind": "PYTHON",
-    "inputRoles": [],
+    "inputRoles": [
+        {
+            "name": "input_folder",
+            "label": "Kubernetes Raw Folder",
+            "description": "Folder containing raw K8S logs",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": false,
+            "acceptsManagedFolder": true
+        }
+    ],
     "outputRoles": [
         {
             "name": "text",
