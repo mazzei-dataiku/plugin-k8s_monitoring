@@ -29,10 +29,10 @@ cluster_type = "AWS"
 cluster_name = 'fe-sandbox-cluster'
 
 # File Folder save information
-folder_type = 'incoming'
 folder_conn = 'filesystem_folders'
-raw_folder = 'k8s_monitoring_raw'
-cleanse_folder = 'k8s_monitoring_cleanse'
+raw_folder_type = 'incoming'
+raw_folder_name = 'k8s_monitoring_raw'
+cleanse_folder_name = 'k8s_monitoring_cleanse'
 file_ext = 'csv'
 
 # AWS / EKS Information
