@@ -6,6 +6,8 @@ from kubernetes import config as k8s_config
 def poll_data():
     # Load config variables
     p = "/data/dataiku/dss_data/clusters/fe-sandbox-cluster/exec/kube_config"
-    k8s_config.load_kube_config(config_file=kube_config)
-    
-    return "I still remember how to do this"
+    try:
+        k8s_config.load_kube_config(config_file=kube_config)
+    except:
+        return "Failed to read"
+    return "I can read"
