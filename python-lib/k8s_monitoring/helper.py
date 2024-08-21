@@ -17,7 +17,7 @@ def get_folder(folder_name, folder_conn):
     return folder
 
 
-def save_data_folder(dt, name, df, mode=None):
+def save_data_folder(dt, name, df, folder_name, folder_type):
     # Date information -- always pad for time series partitioning
     dt_year  = str(dt.year)
     dt_month = str(f'{dt.month:02d}')
