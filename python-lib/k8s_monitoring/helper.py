@@ -5,6 +5,9 @@ import io
 
 
 def get_folder(folder_name, folder_conn):
+    client = dataiku.api_client()
+    project = client.get_default_project()
+
     folder = dataiku.Folder(lookup=folder_name, project_key=dataiku.default_project_key(), ignore_flow=True)
     try:
         folder.get_id()
