@@ -8,10 +8,10 @@
     // Meta data for display purposes:
     "meta": {
         // label: name of the plugin as displayed, should be short
-        "label": "K8s monitoring",
+        "label": "Kubernetes Monitoring",
 
         // description: longer string to help end users understand what this plugin does
-        "description": "",
+        "description": "Macro designed to pull kubernetes metrics.",
 
         "author": "smazzei",
 
@@ -19,7 +19,7 @@
         "icon": "fas fa-puzzle-piece",
 
         // List of tags for filtering the list of plugins
-        "tags": [], //for example: ["Machine Learning", "NLP"]
+        "tags": ["K8S", "AWS", "AZURE", "GCP"], //for example: ["Machine Learning", "NLP"]
 
         // URL where the user can learn more about the plugin
         "url": "",
