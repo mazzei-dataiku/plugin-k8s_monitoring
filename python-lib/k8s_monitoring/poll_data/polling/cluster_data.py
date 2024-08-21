@@ -1,6 +1,7 @@
 from k8s_monitoring.polling import config
 
 def get_data(dt):
+    cluster_type = config.cluster_type
     cluster_name = config.cluster_name
     
     project_id = config.project_id
