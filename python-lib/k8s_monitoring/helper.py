@@ -27,7 +27,7 @@ def save_data_folder(dt, name, df, folder_name, folder_type):
     save_type = config.file_ext
     
     # setup paths
-    if mode == "incoming":
+    if folder_type == "incoming":
         dt_str = dt.strftime("%Y%m%d")
         path   = f'/{mode}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
