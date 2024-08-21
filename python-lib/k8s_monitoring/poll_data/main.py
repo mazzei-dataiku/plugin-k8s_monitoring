@@ -10,8 +10,6 @@ def poll_data():
     # Load config variables
     dt = config.dt
     data_dir = config.data_dir
-    project_id = config.project_id
-    zone = config.zone
     cluster_name = config.cluster_name
     
     # mode type
