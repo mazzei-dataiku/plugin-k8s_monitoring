@@ -4,10 +4,7 @@ import pandas as pd
 import boto3
 
 
-def get_data(NOW, instance_name):
-    # Build Node Group Data Frame
-    # https://instances.vantage.sh/
-
+def get_data(dt):
     k8s_yaml = load_yaml(instance_name)
     ec2 = boto3.client("ec2")
     ng = []
