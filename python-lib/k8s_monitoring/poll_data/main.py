@@ -1,5 +1,5 @@
 from k8s_monitoring import config
-#from k8s_monitoring import helper
+from k8s_monitoring import helper
 
 #from k8s_monitoring.poll_data import cluster_data
 #from k8s_monitoring.poll_data import nodegroup_data
