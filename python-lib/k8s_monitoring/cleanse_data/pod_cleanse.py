@@ -51,6 +51,7 @@ def cleanse(df):
     df.insert(1, "dt_year",   df["date_time"].dt.year)
 
     # Minor Clean Up
+    df['dataiku_project_key'] = df['dataiku_project_key'].fillna(value="N/A")
     df['dataiku_project_key'] = df['dataiku_project_key'].str.upper()
 
     cols = [
