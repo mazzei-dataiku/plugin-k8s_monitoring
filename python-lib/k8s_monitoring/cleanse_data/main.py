@@ -10,6 +10,14 @@ from k8s_monitoring.modules import nodegroup_cleanse
 def cleanse_data(partition):
     # get some values
     mode, data = partition.split("|")
+    k8s_monitoring = dataiku.Folder("CjgexdB8", ignore_flow=True)
+    k8s_monitoring_cleansed = dataiku.Folder("7HBKWZDX")
+
+    # Date time stuff
+    dt = datetime.utcnow()
+    dt_year  = str(dt.year)
+    dt_month = str(f'{dt.month:02d}')
+    dt_day   = str(f'{dt.day:02d}')
 
     # Get current list of files
     l1 = k8s_monitoring.list_paths_in_partition(partition=partition)
