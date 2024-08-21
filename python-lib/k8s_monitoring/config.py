@@ -25,7 +25,7 @@ pod_cleansed_cols = [
 
 # --------------------------------------------------------------------------
 # Cluster Information
-cluster = 'gke-mazzei'
+cluster = 'fe-sandbox-cluster'
 
 # File Folder save information
 file_ext = 'csv'
