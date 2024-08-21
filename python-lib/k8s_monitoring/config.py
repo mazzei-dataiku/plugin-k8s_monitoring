@@ -25,7 +25,8 @@ pod_cleansed_cols = [
 
 # --------------------------------------------------------------------------
 # Cluster Information
-cluster = 'fe-sandbox-cluster'
+cluster_type = "AWS"
+cluster_name = 'fe-sandbox-cluster'
 
 # File Folder save information
 file_ext = 'csv'
