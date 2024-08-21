@@ -29,7 +29,7 @@ def save_data_folder(dt, name, df, mode=None):
         path   = f'/{mode}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
     # Get folder
-    folder = get_folder(config.folder_name)
+    folder = get_folder(config.folder_name, config.folder_conn)
     
     # We want to append to the daily log
     try:
