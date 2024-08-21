@@ -13,6 +13,7 @@ def cleanse_data(partition):
     mode, data = partition.split("|")
     raw_folder = folder = get_folder(config.raw_folder_name)
     cleansed_folder = folder = get_folder(config.cleanse_folder_name)
+    raw_folder_path = config.raw_folder_path
 
     # Date time stuff
     dt = datetime.utcnow()
