@@ -39,17 +39,17 @@ def cleanse_data(partition):
             new_df = df.copy(deep=True)
 
         # Save new data to output folder
-        new_csv = csv.replace("/incoming", "")
+        new_csv = csv.replace(f"/{raw_folder_path}", "")
         with cleansed_folder.get_writer(new_csv) as writer:
             writer.write(new_df.to_csv(index=False).encode("utf-8"))
 
         # move the original if its not the current day
-        today = f"/incoming/{data}/{dt_year}/{dt_month}/{dt_day}/run_{dt_year}{dt_month}{dt_day}.csv"
+        today = f"/{raw_folder_path}/{data}/{dt_year}/{dt_month}/{dt_day}/run_{dt_year}{dt_month}{dt_day}.csv"
         if csv == today:
             continue
         
         ## Move / Save to cold storage
-        cold_csv = csv.replace("incoming", "cold")
+        cold_csv = csv.replace(f"{raw_folder_path}", "cold")
         with raw_folder.get_writer(cold_csv) as writer:
             writer.write(df.to_csv(index=False).encode("utf-8"))
         
