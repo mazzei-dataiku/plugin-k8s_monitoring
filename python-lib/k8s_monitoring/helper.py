@@ -17,7 +17,7 @@ def get_folder(folder_name):
     return folder
 
 
-def save_data_folder(dt, name, df, folder_name, folder_type):
+def save_data_folder(dt, name, df, folder_name, folder_path):
     # Date information -- always pad for time series partitioning
     dt_year  = str(dt.year)
     dt_month = str(f'{dt.month:02d}')
@@ -27,9 +27,9 @@ def save_data_folder(dt, name, df, folder_name, folder_type):
     save_type = config.file_ext
     
     # setup paths
-    if folder_type == "incoming":
+    if folder_path == "incoming":
         dt_str = dt.strftime("%Y%m%d")
-        path   = f'/{folder_type}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
+        path   = f'/{folder_path}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
     # Get folder
     folder = get_folder(folder_name)
