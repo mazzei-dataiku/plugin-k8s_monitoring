@@ -9,8 +9,8 @@ import pandas as pd
 def cleanse_data(dt, partition):
     # get some values
     mode, data = partition.split("|")
-    raw_folder  = helper.get_folder(config.raw_folder_name)
-    cleansed_folder  = helper.get_folder(config.cleanse_folder_name)
+    raw_folder = helper.get_folder(config.raw_folder_name)
+    cleansed_folder = helper.get_folder(config.cleanse_folder_name)
     raw_folder_path = config.raw_folder_path
 
     # Date time stuff
