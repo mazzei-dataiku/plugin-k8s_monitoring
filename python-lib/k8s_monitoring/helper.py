@@ -1,4 +1,4 @@
-from k8s_monitoring.poll_data import config
+from k8s_monitoring import config
 import dataiku
 import pandas as pd
 import io  
