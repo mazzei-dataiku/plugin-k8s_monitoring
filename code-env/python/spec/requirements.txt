@@ -1,0 +1,10 @@
+# K8S Basic
+kubernetes
+
+# GCP
+google-cloud-container
+google-api-python-client
+google-cloud-compute
+
+# AWS
+boto3
