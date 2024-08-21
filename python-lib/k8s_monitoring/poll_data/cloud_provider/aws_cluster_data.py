@@ -1,8 +1,13 @@
+from k8s_monitoring.polling import config
+
 import pandas as pd
 import boto3
 
 
-def get_data(dt, cluster_name, aws_region):
+def get_data(dt):
+    cluster_name = config.cluster_name
+    aws_region = config.aws_region
+    
     eks = boto3.client("eks", region_name=aws_region)
     r = eks.describe_cluster(name=cluster_name)
     data = [
