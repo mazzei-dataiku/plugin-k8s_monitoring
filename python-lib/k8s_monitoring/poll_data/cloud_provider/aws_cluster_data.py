@@ -12,11 +12,9 @@ def get_data(dt, cluster_name, aws_region):
             r['cluster']['version'],
             r['cluster']['platformVersion']
     ]
-
     columns = [
         'date_time', 'aws_region', 'cluster_name',
         'cluster_create_date', 'cluster_status', 'cluster_version', 'cluster_plat_version'
     ]
-    df = pd.DataFrame(c, columns=columns)
-
-    return clusters_df
+    df = pd.DataFrame([data], columns=columns)
+    return df
