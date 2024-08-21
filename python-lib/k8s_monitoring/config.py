@@ -10,17 +10,8 @@ node_name = instance_info.raw["nodeName"]
 # Datetime to be used on all the outputs
 dt = datetime.utcnow()
 
-# File Folder save information
-file_ext = 'csv'
-folder_id = 'k8s_monitoring'
-
-# GCP / GKE Information
-project_id = 'smazzei'
-zone = 'us-central1-f'
-cluster = 'gke-mazzei'
-
-
-# POD Stuff
+# --------------------------------------------------------------------------
+# Pod Status Columns
 pod_cleansed_cols = [
     'date_time', 'dt_year', 'dt_month', 'dt_day', 'dt_hour', 'dt_minute',
     'dss_node_name', 'dataiku_project_key', 'pod_submitter', 'pod_namespace',
@@ -30,5 +21,18 @@ pod_cleansed_cols = [
     'pod_memory_limit', 'pod_memory_request', 'pod_memory_usage', 'pod_memory_percent',
     'k8s_node_name'
 ]
+
+# --------------------------------------------------------------------------
+# Cluster Information
+cluster = 'gke-mazzei'
+
+
+# File Folder save information
+file_ext = 'csv'
+folder_id = 'k8s_monitoring'
+
+# GCP / GKE Information
+project_id = 'smazzei'
+zone = 'us-central1-f'
 
 # EOF
