@@ -25,9 +25,11 @@ class MyRunnable(Runnable):
         return None
 
     def run(self, progress_callback):
-        r = main.cleanse_data("incoming|cluster_data")
-        r = main.cleanse_data("incoming|nodegroup_data")
-        r = main.cleanse_data("incoming|pod_status")
-        r = main.cleanse_data("incoming|nodegroup_status")
+        dt = datetime.utcnow()
+        
+        r = main.cleanse_data(dt, "incoming|cluster_data")
+        r = main.cleanse_data(dt, "incoming|nodegroup_data")
+        r = main.cleanse_data(dt, "incoming|pod_status")
+        r = main.cleanse_data(dt, "incoming|nodegroup_status")
         return output
         
