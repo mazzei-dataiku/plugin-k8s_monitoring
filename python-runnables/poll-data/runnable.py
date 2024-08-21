@@ -1,5 +1,6 @@
-# This file is the actual code for the Python runnable poll-data
 from dataiku.runnables import Runnable
+from k8smonitoring import main
+
 
 class MyRunnable(Runnable):
     """The base interface for a Python runnable"""
@@ -22,9 +23,6 @@ class MyRunnable(Runnable):
         return None
 
     def run(self, progress_callback):
-        """
-        Do stuff here. Can return a string or raise an exception.
-        The progress_callback is a function expecting 1 value: current progress
-        """
+        main.poll_data()
         raise Exception("unimplemented")
         
