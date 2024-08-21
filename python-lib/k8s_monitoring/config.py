@@ -30,7 +30,7 @@ cluster_name = 'fe-sandbox-cluster'
 
 # File Folder save information
 file_ext = 'csv'
-folder_id = 'k8s_monitoring'
+folder_name = 'k8s_monitoring'
 
 # GCP / GKE Information
 project_id = 'smazzei'
