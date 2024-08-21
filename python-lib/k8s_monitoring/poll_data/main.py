@@ -9,5 +9,5 @@ def poll_data():
     try:
         k8s_config.load_kube_config(config_file=kube_config)
     except Exception as e::
-        return "Failed to read"
+        return e
     return "I can read"
