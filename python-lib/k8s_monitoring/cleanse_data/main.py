@@ -55,7 +55,7 @@ def cleanse_data(partition):
     return True
 
 def run():
-    k8s_monitoring = dataiku.Folder("CjgexdB8", ignore_flow=True)
+    k8s_monitoring_raw = dataiku.Folder("CjgexdB8", ignore_flow=True)
 
     k8s_monitoring_cleansed = dataiku.Folder("7HBKWZDX")
 
