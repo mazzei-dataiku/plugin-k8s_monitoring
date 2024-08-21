@@ -43,9 +43,10 @@ def cleanse_data(dt, partition):
 
         # move the original if its not the current day
         today = f"/{raw_folder_path}/{data}/{dt_year}/{dt_month}/{dt_day}/run_{dt_year}{dt_month}{dt_day}.csv"
-        raise Exception(f"{csv} :: {today}")
         if csv == today:
+            raise Exception(f"Don't remove today")
             continue
+        raise Exception("Removing today?")
         
         ## Move / Save to cold storage
         cold_csv = csv.replace(f"{raw_folder_path}", "cold")
