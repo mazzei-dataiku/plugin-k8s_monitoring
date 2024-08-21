@@ -4,5 +4,11 @@ def get_data(dt):
     cluster_type = config.cluster_type
     cluster_name = config.cluster_name
     
-    project_id = config.project_id
-    zone = config.zone
+    if cluster_type == "AWS":
+        123
+    elif cluster_type == "Azure":
+        123
+    elif cluster_type == "GCP":
+        123
+    else:
+        raise Exception(f"Invalid cluster type: {cluster_type}")
