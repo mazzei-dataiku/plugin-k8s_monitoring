@@ -14,9 +14,7 @@ def get_data(dt, cluster_name, aws_region):
     ]
 
     columns = [
-        'date_time',
-        'aws_region',
-        'cluster_name',
+        'date_time', 'aws_region', 'cluster_name',
         'cluster_create_date',
         'cluster_status',
         'cluster_version',
