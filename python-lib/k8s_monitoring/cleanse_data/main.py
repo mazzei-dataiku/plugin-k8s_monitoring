@@ -4,7 +4,7 @@ from k8s_monitoring import helper
 from k8s_monitoring.cleanse_data import pod_cleanse
 from k8s_monitoring.cleanse_data import nodegroup_cleanse
 
-import dataiku
+import pandas as pd
 
 def cleanse_data(dt, partition):
     # get some values
