@@ -4,7 +4,7 @@ import pandas as pd
 import io  
 
 
-def get_folder(folder_name, folder_conn):
+def get_folder(folder_name):
     client = dataiku.api_client()
     project = client.get_default_project()
 
@@ -32,7 +32,7 @@ def save_data_folder(dt, name, df, folder_name, folder_type):
         path   = f'/{folder_type}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
     # Get folder
-    folder = get_folder(folder_name, folder_type)
+    folder = get_folder(folder_name)
     
     # We want to append to the daily log
     try:
