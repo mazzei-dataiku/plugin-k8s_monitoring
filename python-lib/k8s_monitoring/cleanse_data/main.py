@@ -5,10 +5,6 @@ from k8s_monitoring.cleanse_data import pod_cleanse
 from k8s_monitoring.cleanse_data import nodegroup_cleanse
 
 import dataiku
-import pandas as pd, numpy as np
-from dataiku import pandasutils as pdu
-from datetime import datetime
-
 
 def cleanse_data(dt, partition):
     # get some values
@@ -18,7 +14,7 @@ def cleanse_data(dt, partition):
     raw_folder_path = config.raw_folder_path
 
     # Date time stuff
-    dt = datetime.utcnow()
+    
     dt_year  = str(dt.year)
     dt_month = str(f'{dt.month:02d}')
     dt_day   = str(f'{dt.day:02d}')
