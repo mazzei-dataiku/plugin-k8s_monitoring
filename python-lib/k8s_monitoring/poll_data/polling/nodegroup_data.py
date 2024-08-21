@@ -1,4 +1,4 @@
-from k8s_monitoring.poll_data import config
+from k8s_monitoring import config
 
 def get_data(dt):
     cluster_type = config.cluster_type
