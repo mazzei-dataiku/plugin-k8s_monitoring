@@ -31,9 +31,9 @@ class MyRunnable(Runnable):
         dt_month = str(f'{dt.month:02d}')
         dt_day   = str(f'{dt.day:02d}')
 
-        cleanse_data("incoming|cluster_data")
-        cleanse_data("incoming|nodegroup_data")
-        cleanse_data("incoming|pod_status")
-        cleanse_data("incoming|nodegroup_status")
+        main.cleanse_data("incoming|cluster_data")
+        main.cleanse_data("incoming|nodegroup_data")
+        main.cleanse_data("incoming|pod_status")
+        main.cleanse_data("incoming|nodegroup_status")
         return output
         
