@@ -19,7 +19,7 @@ def poll_data():
      
     # Nodegroup Information
     name = "nodegroup_data"
-    nodegroup_df = nodegroup_data.get_data(dt, cluster_name)
+    nodegroup_df = nodegroup_data.get_data(dt)
     helper.save_data_folder(dt, name, nodegroup_df, folder_type)
     
     # Pod Status
