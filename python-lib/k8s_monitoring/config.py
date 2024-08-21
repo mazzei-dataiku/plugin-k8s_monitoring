@@ -30,7 +30,7 @@ cluster_name = 'fe-sandbox-cluster'
 
 # File Folder save information
 folder_conn = 'filesystem_folders'
-raw_folder_type = 'incoming'
+raw_folder_path = 'incoming'
 raw_folder_name = 'k8s_monitoring_raw'
 cleanse_folder_name = 'k8s_monitoring_cleanse'
 cleanse_folder_path = '' # Leave actually blank unless desired to change path
