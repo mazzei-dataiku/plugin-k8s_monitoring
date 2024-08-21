@@ -21,12 +21,12 @@ def cleanse_data(partition):
     dt_day   = str(f'{dt.day:02d}')
 
     # Get current list of files
-    l1 = k8s_monitoring.list_paths_in_partition(partition=partition)
+    l1 = raw_folder.list_paths_in_partition(partition=partition)
 
     # Cleanse
     for csv in l1:
         # Read in the base data
-        with k8s_monitoring.get_download_stream(path=csv) as stream:
+        with raw_folder.get_download_stream(path=csv) as stream:
             df = pd.read_csv(stream)
 
         # Cleanse
@@ -39,7 +39,7 @@ def cleanse_data(partition):
 
         # Save new data to output folder
         new_csv = csv.replace("/incoming", "")
-        with k8s_monitoring_cleansed.get_writer(new_csv) as writer:
+        with raw_folder.get_writer(new_csv) as writer:
             writer.write(new_df.to_csv(index=False).encode("utf-8"))
 
         # move the original if its not the current day
@@ -54,12 +54,4 @@ def cleanse_data(partition):
         k8s_monitoring.delete_path(path=csv)
     return True
 
-def run():
-
-
-    cleanse_data("incoming|cluster_data")
-    cleanse_data("incoming|nodegroup_data")
-    cleanse_data("incoming|pod_status")
-    cleanse_data("incoming|nodegroup_status")
-    
-    return "Cleansed"
+# EOF
