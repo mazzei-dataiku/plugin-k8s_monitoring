@@ -10,6 +10,7 @@ from k8s_monitoring.poll_data.polling import nodegroup_status
 def poll_data():
     # Load config variables
     dt = config.dt
+    folder_name = config.raw_folder
     folder_type = config.folder_type
     
     # Cluster Information
