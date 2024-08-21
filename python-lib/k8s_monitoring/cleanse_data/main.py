@@ -10,7 +10,7 @@ from dataiku import pandasutils as pdu
 from datetime import datetime
 
 
-def cleanse_data(partition):
+def cleanse_data(dt, partition):
     # get some values
     mode, data = partition.split("|")
     raw_folder  = helper.get_folder(config.raw_folder_name)
