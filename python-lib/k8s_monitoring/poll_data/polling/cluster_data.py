@@ -10,7 +10,9 @@ def get_data(dt):
     
     elif cluster_type == "Azure":
         return 123
+    
     elif cluster_type == "GCP":
         return 123
+    
     else:
         raise Exception(f"Invalid cluster type: {cluster_type}")
