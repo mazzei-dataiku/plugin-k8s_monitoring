@@ -1,11 +1,11 @@
 from k8s_monitoring.poll_data import config
+from k8s_monitoring.poll_data import helper
 
 #from k8s_monitoring.poll_data import cluster_data
 #from k8s_monitoring.poll_data import nodegroup_data
 from k8s_monitoring.poll_data.polling import pod_status
 from k8s_monitoring.poll_data.polling import nodegroup_status
 
-from k8s_monitoring.poll_data import helper
 
 def poll_data():
     # Load config variables
