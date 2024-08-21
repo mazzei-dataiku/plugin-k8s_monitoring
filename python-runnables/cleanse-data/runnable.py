@@ -31,5 +31,5 @@ class MyRunnable(Runnable):
         r = main.cleanse_data(dt, "incoming|nodegroup_data")
         r = main.cleanse_data(dt, "incoming|pod_status")
         r = main.cleanse_data(dt, "incoming|nodegroup_status")
-        return output
+        return "FINISHED"
         
