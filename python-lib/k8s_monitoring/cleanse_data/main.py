@@ -3,8 +3,8 @@ import pandas as pd, numpy as np
 from dataiku import pandasutils as pdu
 from datetime import datetime
 
-from k8s_monitoring.modules import pod_cleanse
-from k8s_monitoring.modules import nodegroup_cleanse
+from k8s_monitoring.cleanse_data import pod_cleanse
+from k8s_monitoring.cleanse_data import nodegroup_cleanse
 
 
 def cleanse_data(partition):
