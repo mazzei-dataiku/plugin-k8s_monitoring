@@ -33,9 +33,12 @@ folder_name = 'k8s_monitoring'
 folder_conn = 'filesystem_folders'
 file_ext = 'csv'
 
+# AWS / EKS Information
+aws_region = 'us-west-2'
+
 # GCP / GKE Information
-project_id = 'smazzei'
-zone = 'us-central1-f'
+gcp_project_id = 'smazzei'
+gcp_zone = 'us-central1-f'
 
 # --------------------------------------------------------------------------
 # EOF
