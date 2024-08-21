@@ -1,4 +1,5 @@
 from k8s_monitoring import helper
+from k8s_monitoring import config
 from k8s_monitoring.cleanse_data import pod_cleanse
 from k8s_monitoring.cleanse_data import nodegroup_cleanse
 
@@ -11,8 +12,8 @@ from datetime import datetime
 def cleanse_data(partition):
     # get some values
     mode, data = partition.split("|")
-    raw_folder = folder = helper.get_folder(config.raw_folder_name)
-    cleansed_folder = folder = helper.get_folder(config.cleanse_folder_name)
+    raw_folder  = helper.get_folder(config.raw_folder_name)
+    cleansed_folder  = helper.get_folder(config.cleanse_folder_name)
     raw_folder_path = config.raw_folder_path
 
     # Date time stuff
