@@ -29,6 +29,7 @@ cluster_type = "AWS"
 cluster_name = 'fe-sandbox-cluster'
 
 # File Folder save information
+folder_type = 'incoming'
 folder_name = 'k8s_monitoring'
 folder_conn = 'filesystem_folders'
 file_ext = 'csv'
