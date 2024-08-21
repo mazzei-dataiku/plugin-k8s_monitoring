@@ -1,6 +1,7 @@
 import dataiku
 from datetime import datetime
 
+# --------------------------------------------------------------------------
 # Specific Dataiku variables
 client = dataiku.api_client()
 instance_info = client.get_instance_info()
@@ -35,4 +36,5 @@ folder_id = 'k8s_monitoring'
 project_id = 'smazzei'
 zone = 'us-central1-f'
 
+# --------------------------------------------------------------------------
 # EOF
