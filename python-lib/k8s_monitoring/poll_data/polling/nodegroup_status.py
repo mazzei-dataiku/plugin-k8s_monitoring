@@ -1,9 +1,14 @@
+from k8s_monitoring.poll_data import config
+
 import pandas as pd
 import datetime
 from kubernetes import client as k8s_client
 from kubernetes import config as k8s_config
 
-def get_data(dt, cluster_name, data_dir, pods_df):
+def get_data(dt, pods_df):
+    cluster_name = config.cluster_name
+    data_dir = config.data_dir
+    
     kube_config = f"{data_dir}/clusters/{cluster_name}/exec/kube_config"
     k8s_config.load_kube_config(config_file=kube_config)
 
