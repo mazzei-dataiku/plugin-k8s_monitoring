@@ -10,4 +10,12 @@ def poll_data():
         k8s_config.load_kube_config(config_file=kube_config)
     except Exception as e:
         return e
-    return "I can read"
+    
+    v1 = k8s_client.CoreV1Api()
+    ret = v1.list_pod_for_all_namespaces(watch=False)
+    l =[]
+
+    for i in ret.items:
+        break
+        
+    return i
