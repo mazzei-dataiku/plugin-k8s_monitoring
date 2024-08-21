@@ -5,7 +5,7 @@ import pandas as pd
 
 def cleanse(df):
     # Remove System Level
-    df = df.loc[(df['pod_namespace'].str.contains("dssns-"))]
+    #df = df.loc[(df['pod_namespace'].str.contains("dssns-"))]
     if df.empty:
         return pd.DataFrame(columns=config.pod_cleansed_cols)
     
