@@ -1,7 +1,7 @@
 {
     "meta": {
-        "label": "Custom runnable poll-data",
-        "description": "",
+        "label": "Poll K8S Data",
+        "description": "Logic to connect to the local cluster and poll the data",
         "icon": "fas fa-puzzle-piece"
     },
     "impersonate": false,
