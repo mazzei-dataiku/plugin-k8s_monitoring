@@ -2,7 +2,6 @@ from k8s_monitoring.polling import config
 
 def get_data(dt):
     cluster_type = config.cluster_type
-    cluster_name = config.cluster_name
     
     if cluster_type == "AWS":
         from k8s_monitoring.poll_data.cloud_provider import get_data
