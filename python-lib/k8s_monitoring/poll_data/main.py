@@ -10,8 +10,6 @@ from k8s_monitoring.poll_data.polling import nodegroup_status
 def poll_data():
     # Load config variables
     dt = config.dt
-    cluster_name = config.cluster_name
-    data_dir = config.data_dir
     
     # mode type
     mode = "incoming"
