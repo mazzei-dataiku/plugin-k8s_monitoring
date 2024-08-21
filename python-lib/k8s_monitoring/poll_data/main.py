@@ -8,6 +8,6 @@ def poll_data():
     p = "/data/dataiku/dss_data/clusters/fe-sandbox-cluster/exec/kube_config"
     try:
         k8s_config.load_kube_config(config_file=kube_config)
-    except:
+    except Exception as e::
         return "Failed to read"
     return "I can read"
