@@ -1,5 +1,5 @@
 from dataiku.runnables import Runnable
-from k8smonitoring import main
+from k8s_monitoring import main
 
 
 class MyRunnable(Runnable):
