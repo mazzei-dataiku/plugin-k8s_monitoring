@@ -39,7 +39,7 @@ def cleanse_data(partition):
 
         # Save new data to output folder
         new_csv = csv.replace("/incoming", "")
-        with raw_folder.get_writer(new_csv) as writer:
+        with cleansed_folder.get_writer(new_csv) as writer:
             writer.write(new_df.to_csv(index=False).encode("utf-8"))
 
         # move the original if its not the current day
