@@ -5,12 +5,7 @@ import io
 
 
 def get_folder(folder_name):
-    folder = dataiku.Folder(
-            lookup=folder_name, 
-            project_key=dataiku.default_project_key(),
-            ignore_flow=True
-    )
-    
+    folder = dataiku.Folder(lookup=folder_name, project_key=dataiku.default_project_key(), ignore_flow=True)
     try:
         folder.get_id()
     except:
