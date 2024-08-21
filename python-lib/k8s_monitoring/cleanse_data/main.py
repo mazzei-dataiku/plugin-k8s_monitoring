@@ -46,10 +46,12 @@ def cleanse_data(partition):
         today = f"/incoming/{data}/{dt_year}/{dt_month}/{dt_day}/run_{dt_year}{dt_month}{dt_day}.csv"
         if csv == today:
             continue
+        
         ## Move / Save to cold storage
         cold_csv = csv.replace("incoming", "cold")
         with raw_folder.get_writer(cold_csv) as writer:
             writer.write(df.to_csv(index=False).encode("utf-8"))
+        
         ## Delete the original
         raw_folder.delete_path(path=csv)
     return True
