@@ -33,8 +33,8 @@ def poll_data():
     helper.save_data_folder(dt, name, pods_df, mode)    
     
     # Node Status
-    # name = "nodegroup_status"
-    # ngs_df = nodegroup_status.get_data(dt, cluster, data_dir, pods_df)
-    # helper.save_data_folder(dt, name, ngs_df, mode)
+    name = "nodegroup_status"
+    ngs_df = nodegroup_status.get_data(dt, cluster, data_dir, pods_df)
+    helper.save_data_folder(dt, name, ngs_df, mode)
     
     return "FINISH"
