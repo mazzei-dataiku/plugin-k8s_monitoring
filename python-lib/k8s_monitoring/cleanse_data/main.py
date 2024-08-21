@@ -48,10 +48,10 @@ def cleanse_data(partition):
             continue
         ## Move / Save to cold storage
         cold_csv = csv.replace("incoming", "cold")
-        with k8s_monitoring.get_writer(cold_csv) as writer:
+        with raw_folder.get_writer(cold_csv) as writer:
             writer.write(df.to_csv(index=False).encode("utf-8"))
         ## Delete the original
-        k8s_monitoring.delete_path(path=csv)
+        raw_folder.delete_path(path=csv)
     return True
 
 # EOF
