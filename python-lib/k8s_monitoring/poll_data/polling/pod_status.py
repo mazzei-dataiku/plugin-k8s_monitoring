@@ -1,3 +1,5 @@
+from k8s_monitoring.poll_data import config
+
 import pandas as pd
 import datetime
 from kubernetes import client as k8s_client
