@@ -29,7 +29,7 @@ def save_data_folder(dt, name, df, folder_name, folder_type):
     # setup paths
     if folder_type == "incoming":
         dt_str = dt.strftime("%Y%m%d")
-        path   = f'/{mode}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
+        path   = f'/{folder_type}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
     # Get folder
     folder = get_folder(folder_name, folder_type)
