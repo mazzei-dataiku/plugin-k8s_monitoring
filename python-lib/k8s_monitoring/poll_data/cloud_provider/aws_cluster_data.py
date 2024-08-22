@@ -5,8 +5,8 @@ import boto3
 
 
 def get_data(self, dt):
-    cluster_name = config.cluster_name
-    aws_region = config.aws_region
+    cluster_name = self.config["cluster_name"]
+    aws_region = self.config["aws_region"]
     
     eks = boto3.client("eks", region_name=aws_region)
     r = eks.describe_cluster(name=cluster_name)
