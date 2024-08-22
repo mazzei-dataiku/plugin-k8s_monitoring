@@ -23,4 +23,5 @@
         - Cloud Provider Information
         - Folder Connection Type (Local/Cloud)
         - Folder Name
+        [Example](./.images/macro_scenario.png)
     
