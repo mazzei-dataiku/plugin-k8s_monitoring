@@ -12,6 +12,13 @@
             "label": "Cloud Provider",
             "type": "SEPARATOR"
         },
+                {
+  "type": "STRING",
+  "name": "cluster_name",
+  "label": "K8S Cluster Name",
+  "defaultValue": "",
+            "mandatory": true
+},
           {
       "name": "cluster_type",
       "label": "Cluster Type",
@@ -31,13 +38,18 @@
       "visibilityCondition": "model.cluster_type == 'AWS'"
   },
         // ------------------- GCP ----------------------------------------------------------------------
-        {
-  "type": "STRING",
-  "name": "cluster_name",
-  "label": "K8S Cluster Name",
-  "defaultValue": "",
-            "mandatory": true
-}
+          {
+      "name": "gcp_project_id",
+      "label": "AWS Region",
+      "type": "STRING",
+      "visibilityCondition": "model.cluster_type == 'AWS'"
+  },
+                  {
+      "name": "gcp_zone",
+      "label": "AWS Region",
+      "type": "STRING",
+      "visibilityCondition": "model.cluster_type == 'AWS'"
+  }
     ],
     // ------------------- RETURN ----------------------------------------------------------------------
     "permissions": [],
