@@ -51,14 +51,13 @@ def get_data(self, dt):
 
         # Estimated costs per hour
         # https://cloud.google.com/compute/all-pricing
-        instance_price = 0.473212
+        #instance_price = 0.473212
 
         t = [
             dt,
             nodegroup_name, nodegroup_instance_type,
             nodegroup_AS_enabled, nodegroup_desired_size, nodegroup_min_size, nodegroup_max_size,
-            instance_desc, instance_cores, instance_memory, gpu_count, gpu_cpu, gpu_memory,
-            instance_price
+            instance_desc, instance_cores, instance_memory, gpu_count, gpu_cpu, gpu_memory
         ]
         data.append(t)
 
@@ -66,8 +65,7 @@ def get_data(self, dt):
         "date_time",
         "nodegroup_name", "nodegroup_instance_type",
         "nodegroup_AS_enabled", "nodegroup_desired_size", "nodegroup_min_size", "nodegroup_max_size",
-        "instance_desc", "instance_cores", "instance_memory", "gpu_count", "gpu_cpu", 'gpu_memory',
-        "instance_price"
+        "instance_desc", "instance_cores", "instance_memory", "gpu_count", "gpu_cpu", 'gpu_memory'
     ]
 
     df = pd.DataFrame(data, columns=cols)
