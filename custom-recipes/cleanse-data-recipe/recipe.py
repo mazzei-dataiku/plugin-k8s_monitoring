@@ -24,7 +24,6 @@ def cleanse_data(dt, input_folder, output_folder, partition):
     raw_folder_path = config.raw_folder_path
 
     # Date time stuff
-    
     dt_year  = str(dt.year)
     dt_month = str(f'{dt.month:02d}')
     dt_day   = str(f'{dt.day:02d}')
