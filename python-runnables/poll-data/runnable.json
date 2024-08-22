@@ -38,6 +38,7 @@
       ],
       "mandatory": true
     },
+    // ------------------- AWS ----------------------------------------------------------------------
     {
       "name": "aws_region",
       "label": "AWS Region",
@@ -45,6 +46,7 @@
       "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'AWS'"
     },
+    // ------------------- GCP ----------------------------------------------------------------------
     {
       "name": "gcp_project_id",
       "label": "GCP Project ID",
@@ -59,6 +61,7 @@
       "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'GCP'"
     },
+    // ------------------- Folder ----------------------------------------------------------------------
     {
       "name": "sep2",
       "label": "Dataiku Folder Storage",
@@ -77,6 +80,7 @@
       "mandatory": true
     }
   ],
+  // ------------------- RETURN ----------------------------------------------------------------------
   "permissions": [],
   "resultType": "HTML",
   "resultLabel": "Kubernetes Data Poll",
