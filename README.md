@@ -41,6 +41,12 @@
 1. Select the Raw folder for input, and create a new folder for output
 1. **NOTE** Under the "Advanced Tab" you may need to disable "Container Configuration" depending on the DSS Setup
 1. Run
+1. Create a new scenario
+    1. Name = "Cleanse K8S Data"
+    1. Trigger = Time-based, every hour
+    1. Steps:
+        1. Build "Cleanse Folder"
+        1. Macro -- "Clear Scenario Run Logs" -- keep only the last 2/3 days (Project creates a lot of logs)
 
 ## Review
 
