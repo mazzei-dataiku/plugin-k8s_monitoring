@@ -2,7 +2,7 @@
     "meta": {
         "label": "Poll K8S Data",
         "description": "Logic to connect to the local cluster and poll the data",
-        "icon": "fas fa-puzzle-piece"
+        "icon": "fas fa-stream"
     },
     "impersonate": false,
     "params": [],
