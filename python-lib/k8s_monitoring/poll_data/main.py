@@ -7,7 +7,8 @@ from k8s_monitoring.poll_data.polling import pod_status
 from k8s_monitoring.poll_data.polling import nodegroup_status
 
 
-def poll_data():
+def poll_data(self):
+    return self.config["cluster_name"]
     # Load config variables
     dt = config.dt
     folder_name = config.raw_folder_name
