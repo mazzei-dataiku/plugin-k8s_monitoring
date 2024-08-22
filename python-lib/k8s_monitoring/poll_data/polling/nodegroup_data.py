@@ -10,7 +10,9 @@ def get_data(self, dt):
         raise Exception("Azure cluster has not been implemented yet.")
     
     elif cluster_type == "GCP":
-        return 123
+        from k8s_monitoring.poll_data.cloud_provider import gcp_nodegroup_data
+        df = gcp_nodegroup_data.get_data(self, dt)
+        return df
     
     else:
         raise Exception(f"Invalid cluster type: {cluster_type}")
