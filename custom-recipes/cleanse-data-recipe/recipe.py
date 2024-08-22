@@ -71,6 +71,7 @@ input_folder = get_input_names_for_role('input_folder')[0]
 output_folder = get_output_names_for_role('output_folder')
 
 print(f"AHHHHHHHHH {input_folder}")
+print(f"AHHHHHHHHH {output_folder}")
 
 # Cleanse Data
 r = cleanse_data(dt, input_folder, output_folder, "incoming|cluster_data")
