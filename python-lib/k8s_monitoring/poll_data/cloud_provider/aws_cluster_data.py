@@ -4,7 +4,7 @@ import pandas as pd
 import boto3
 
 
-def get_data(dt):
+def get_data(self, dt):
     cluster_name = config.cluster_name
     aws_region = config.aws_region
     
