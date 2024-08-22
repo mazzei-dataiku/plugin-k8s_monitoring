@@ -13,7 +13,7 @@ def get_data(self, dt):
     
     elif cluster_type == "GCP":
         from k8s_monitoring.poll_data.cloud_provider import gcp_cluster_data
-        df = aws_cluster_data.get_data(self, dt)
+        df = gcp_cluster_data.get_data(self, dt)
         return df
     
     else:
