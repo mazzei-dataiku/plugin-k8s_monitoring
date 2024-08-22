@@ -25,7 +25,7 @@
         {
   "type": "STRING",
   "name": "cluster_name",
-  "label": "K8S Cluster Name: ",
+  "label": "K8S Cluster Name",
   "defaultValue": "",
             "mandatory": true
 }
