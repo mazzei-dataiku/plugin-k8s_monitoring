@@ -24,24 +24,11 @@ pod_cleansed_cols = [
 ]
 
 # --------------------------------------------------------------------------
-# Cluster Information
-cluster_type = "AWS"
-cluster_name = 'fe-sandbox-cluster'
-
-# AWS / EKS Information
-aws_region = 'us-west-2'
-
-# GCP / GKE Information
-gcp_project_id = 'smazzei'
-gcp_zone = 'us-central1-f'
-
 # File Folder save information
-folder_conn = 'filesystem_folders'
 raw_folder_path = 'incoming'
-raw_folder_name = 'k8s_monitoring_raw'
+file_ext = 'csv'
 cleanse_folder_name = 'k8s_monitoring_cleanse'
 cleanse_folder_path = '' # Leave actually blank unless desired to change path
-file_ext = 'csv'
 
 # --------------------------------------------------------------------------
 # EOF
