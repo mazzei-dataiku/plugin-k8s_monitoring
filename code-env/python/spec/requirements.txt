@@ -3,6 +3,7 @@ boto3
 
 # Azure
 azure-identity
+azure-mgmt-compute
 azure-mgmt-containerservice
 azure-mgmt-kubernetesconfiguration
 azure-mgmt-resource
