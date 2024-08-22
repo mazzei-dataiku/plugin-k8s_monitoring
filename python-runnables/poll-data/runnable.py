@@ -22,7 +22,7 @@ class MyRunnable(Runnable):
         # Load config variables
         dt = config.dt
         folder_name = self.config["raw_folder_name"]
-        folder_path = self.config["aw_folder_path"]
+        folder_path = self.config["aws_folder_path"]
 
         # Cluster Information
         name = "cluster_data"
