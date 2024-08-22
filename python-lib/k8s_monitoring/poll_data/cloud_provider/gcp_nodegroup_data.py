@@ -3,7 +3,10 @@ from google.cloud import container_v1
 from google.cloud import compute
 
 def get_data(self, dt):
-    project_id, zone, cluster
+    project_id = self.config["gcp_project_id"]
+    zone = self.config["gcp_zone"]
+    cluster_name = self.config["cluster_name"]
+    
     # Make the connection
     client = container_v1.ClusterManagerClient()
     response = client.get_cluster(name=f'projects/{project_id}/locations/{zone}/clusters/{cluster}')
