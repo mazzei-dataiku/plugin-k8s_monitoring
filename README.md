@@ -25,6 +25,7 @@
         - Cloud Provider Information
         - Folder Connection Type (Local/Cloud)
         - Folder Name
+        
         ![Example](./.images/macro_scenario.png)
     1. Run Scenario
 1. Update the new folder in the flow for partitioning
