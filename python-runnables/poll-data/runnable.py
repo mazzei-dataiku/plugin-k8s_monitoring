@@ -21,7 +21,7 @@ class MyRunnable(Runnable):
     def run(self, progress_callback):
         # Load config variables
         dt = config.dt
-        folder_name = self.config["raw_folder_name
+        folder_name = self.config["raw_folder_name"]
         folder_path = config.raw_folder_path
 
         # Cluster Information
