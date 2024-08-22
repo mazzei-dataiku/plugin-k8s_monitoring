@@ -27,7 +27,7 @@ def save_data_folder(self, dt, name, df):
     
     # setup paths
     dt_str = dt.strftime("%Y%m%d")
-    path   = f'/{raw_folder_path}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
+    path   = f'/{config.raw_folder_path}/{name}/{dt_year}/{dt_month}/{dt_day}/run_{dt_str}.{save_type}'
     
     # Get folder
     folder = get_folder(self)
