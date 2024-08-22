@@ -67,10 +67,8 @@ def cleanse_data(dt, input_folder, output_folder, partition):
 dt = datetime.utcnow()
 
 # Input/Output Information
-input_folder = get_input_names_for_role('input_folder')
-input_folder = input_folder.split(".")[1]
-output_folder = get_input_names_for_role('output_folder')
-output_folder = output_folder.split(".")[1]
+input_folder = get_input_names_for_role('input_folder')[0]
+output_folder = get_input_names_for_role('output_folder')[0]
 
 print(f"AHHHHHHHHH {input_folder}")
 
