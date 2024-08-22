@@ -24,8 +24,8 @@ class MyRunnable(Runnable):
 
         # Cluster Information
         name = "cluster_data"
-        #cluster_df = cluster_data.get_data(self, dt)
-        #helper.save_data_folder(self, dt, name, cluster_df)
+        cluster_df = cluster_data.get_data(self, dt)
+        helper.save_data_folder(self, dt, name, cluster_df)
 
         # Nodegroup Information
         name = "nodegroup_data"
