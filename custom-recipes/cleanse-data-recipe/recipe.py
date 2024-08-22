@@ -1,16 +1,12 @@
 from dataiku.customrecipe import get_input_names_for_role, get_recipe_config, get_output_names_for_role
 
-from k8s_monitoring.cleanse_data import main
-from datetime import datetime
-
-
-
 from k8s_monitoring import config
 from k8s_monitoring import helper
 
 from k8s_monitoring.cleanse_data import pod_cleanse
 from k8s_monitoring.cleanse_data import nodegroup_cleanse
 
+from datetime import datetime
 import pandas as pd
 
 def cleanse_data(dt, input_folder, output_folder, partition):
