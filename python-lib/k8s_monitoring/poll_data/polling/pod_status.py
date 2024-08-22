@@ -7,7 +7,7 @@ from kubernetes import config as k8s_config
 
 
 def get_data(self, dt):
-    cluster_name = config.cluster_name
+    cluster_name = self.config["cluster_name"]
     data_dir = config.data_dir
     
     kube_config = f"{data_dir}/clusters/{cluster_name}/exec/kube_config"
