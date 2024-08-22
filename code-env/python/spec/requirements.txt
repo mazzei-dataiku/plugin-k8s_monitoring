@@ -1,10 +1,14 @@
 # K8S Basic
 kubernetes
 
+# AWS
+boto3
+
+# Azure
+azure-mgmt-storage
+azure-storage-blob
+
 # GCP
 google-cloud-container
 google-api-python-client
 google-cloud-compute
-
-# AWS
-boto3
