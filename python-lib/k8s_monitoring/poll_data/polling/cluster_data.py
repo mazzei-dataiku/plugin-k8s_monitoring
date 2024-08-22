@@ -8,7 +8,7 @@ def get_data(self, dt):
         df = aws_cluster_data.get_data(self, dt)
         return df
     
-    elif cluster_type == "Azure":
+    elif cluster_type == "AZURE":
         from k8s_monitoring.poll_data.cloud_provider import azure_cluster_data
         df = azure_cluster_data.get_data(self, dt)
         return df
