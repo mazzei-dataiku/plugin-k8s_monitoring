@@ -13,7 +13,7 @@
         // description: longer string to help end users understand what this plugin does
         "description": "Plugin designed to poll kubernetes logs (AWZ|Azure|GCP) and store Cluster, Nodegroup, Pods data. Recipe is available to then cleanse the raw data.",
 
-        "author": "Stephen Mazzei",
+        "author": "Stephen.Mazzei@dataiku.com",
 
         // icon: must be one of the FontAwesome 5.15.4 icons, complete list here at https://fontawesome.com/v5/docs/
         "icon": "fas fa-dharmachakra",
