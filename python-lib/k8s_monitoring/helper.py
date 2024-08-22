@@ -11,7 +11,7 @@ def get_folder(self):
     try:
         folder.get_id()
     except:
-        folder_handle = project.create_managed_folder(name=self.config["raw_folder_name"], connection_name=celf.config["folder_conn"])
+        folder_handle = project.create_managed_folder(name=self.config["raw_folder_name"], connection_name=self.config["folder_conn"])
         folder = dataiku.Folder(lookup=self.config["raw_folder_name"], ignore_flow=True, project_key=dataiku.default_project_key())
     return folder
 
