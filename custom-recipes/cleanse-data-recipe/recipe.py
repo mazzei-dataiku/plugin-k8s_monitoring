@@ -1,7 +1,6 @@
 from dataiku.customrecipe import get_input_names_for_role, get_recipe_config, get_output_names_for_role
 
 from k8s_monitoring import config
-from k8s_monitoring import helper
 
 from k8s_monitoring.cleanse_data import pod_cleanse
 from k8s_monitoring.cleanse_data import nodegroup_cleanse
@@ -11,11 +10,23 @@ import pandas as pd
 
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
+def get_folder(folder_name):
+    client = dataiku.api_client()
+    project = client.get_default_project()
+
+    folder = dataiku.Folder(lookup=folder_name, project_key=dataiku.default_project_key(), ignore_flow=True)
+    try:
+        folder.get_id()
+    except:
+        folder_handle = project.create_managed_folder(name=folder_name, connection_name=config.folder_conn)
+        folder = dataiku.Folder(lookup=folder_name, ignore_flow=True, project_key=dataiku.default_project_key())
+    return folder
+
 def cleanse_data(dt, input_folder, output_folder, partition):
     # get some values
     mode, data = partition.split("|")
-    raw_folder = helper.get_folder(input_folder)
-    cleansed_folder = helper.get_folder(output_folder)
+    raw_folder = get_folder(input_folder)
+    cleansed_folder = get_folder(output_folder)
     raw_folder_path = config.raw_folder_path
 
     # Date time stuff
