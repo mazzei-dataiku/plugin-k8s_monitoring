@@ -30,7 +30,7 @@ class MyRunnable(Runnable):
         # Nodegroup Information
         name = "nodegroup_data"
         nodegroup_df = nodegroup_data.get_data(self, dt)
-        helper.save_data_folder(self=, dt, name, nodegroup_df)
+        helper.save_data_folder(self, dt, name, nodegroup_df)
 
         # Pod Status
         name = "pod_status"
