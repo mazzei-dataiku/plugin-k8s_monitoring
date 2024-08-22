@@ -37,17 +37,15 @@ def get_data(self, dt):
             gpu_count = 0
             gpu_cpu = 0
             gpu_memory = 0
-        instance_price = 1.0080
-        
-        if gpu_count > 0:
-            instance_price = 0.5260
+        #instance_price = 1.0080
+        #if gpu_count > 0:
+        #    instance_price = 0.5260
         
         t = [
             dt,
             nodegroup_name, nodegroup_instance_type,
             nodegroup_AS_enabled, nodegroup_desired_size, nodegroup_min_size, nodegroup_max_size,
-            instance_desc, instance_cores, instance_memory, gpu_count, gpu_cpu, gpu_memory,
-            instance_price
+            instance_desc, instance_cores, instance_memory, gpu_count, gpu_cpu, gpu_memory
         ]
         
         data.append(t)
@@ -57,8 +55,7 @@ def get_data(self, dt):
         "date_time",
         "nodegroup_name", "nodegroup_instance_type",
         "nodegroup_AS_enabled", "nodegroup_desired_size", "nodegroup_min_size", "nodegroup_max_size",
-        "instance_desc", "instance_cores", "instance_memory", "gpu_count", "gpu_cpu", 'gpu_memory',
-        "instance_price"
+        "instance_desc", "instance_cores", "instance_memory", "gpu_count", "gpu_cpu", 'gpu_memory'
     ]
     df = pd.DataFrame(data, columns=cols)
     return df
