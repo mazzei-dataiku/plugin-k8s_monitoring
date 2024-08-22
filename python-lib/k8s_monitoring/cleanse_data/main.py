@@ -6,7 +6,7 @@ from k8s_monitoring.cleanse_data import nodegroup_cleanse
 
 import pandas as pd
 
-def cleanse_data(dt, partition):
+def cleanse_data(dt, input_folder, output_folder, partition):
     # get some values
     mode, data = partition.split("|")
     raw_folder = helper.get_folder(config.raw_folder_name)
