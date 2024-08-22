@@ -1,6 +1,5 @@
 import pandas as pd
 from azure.identity import AzureCliCredential
-from azure.mgmt.resource import ResourceManagementClient
 from azure.mgmt.containerservice import ContainerServiceClient
 
 def get_data(self, dt):
@@ -9,9 +8,7 @@ def get_data(self, dt):
     cluster_name = 'mazzei-aks'
 
     credential = AzureCliCredential()
-    resouce_client = ResourceManagementClient(credential,subscription_id)
     container_client = ContainerServiceClient(credential,subscription_id)
-    resouce_list = resouce_client.resources.list_by_resource_group(resource_group)
     get_aks = container_client.managed_clusters.get(resource_group, cluster_name)
 
     data = [

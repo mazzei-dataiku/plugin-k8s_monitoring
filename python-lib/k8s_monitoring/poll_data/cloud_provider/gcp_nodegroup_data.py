@@ -13,7 +13,6 @@ def get_data(self, dt):
 
     data = []
     for np in response.node_pools:
-        date_time = dt
         nodegroup_name = np.name
         nodegroup_instance_type = np.config.machine_type
 
