@@ -6,8 +6,10 @@ def get_data(self, dt):
         df = aws_nodegroup_data.get_data(self, dt)
         return df
     
-    elif cluster_type == "Azure":
-        raise Exception("Azure cluster has not been implemented yet.")
+    elif cluster_type == "AZURE":
+        from k8s_monitoring.poll_data.cloud_provider import azure_nodegroup_data
+        df = azure_nodegroup_data.get_data(self, dt)
+        return df
     
     elif cluster_type == "GCP":
         from k8s_monitoring.poll_data.cloud_provider import gcp_nodegroup_data
