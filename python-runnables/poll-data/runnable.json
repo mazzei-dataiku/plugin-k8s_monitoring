@@ -21,7 +21,13 @@
           { "value": "GCP", "label": "Google GKE"}
       ],
       "mandatory": true
-  }
+  },
+        {
+  "type": "STRING",
+  "name": "cluster_name",
+  "label": "K8S Cluster Name: ",
+  "defaultValue": "At any street corner the feeling of absurdity can strike any man in the face."
+}
     ],
     "permissions": [],
     "resultType": "HTML",
