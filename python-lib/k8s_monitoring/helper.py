@@ -7,12 +7,12 @@ import io
 def get_folder(self):
     client = dataiku.api_client()
     project = client.get_default_project()
-    folder = dataiku.Folder(lookup=self.config["folder_name"], project_key=dataiku.default_project_key(), ignore_flow=True)
+    folder = dataiku.Folder(lookup=self.config["raw_folder_name"], project_key=dataiku.default_project_key(), ignore_flow=True)
     try:
         folder.get_id()
     except:
-        folder_handle = project.create_managed_folder(name=elf.config["folder_name"], connection_name=celf.config["folder_conn"])
-        folder = dataiku.Folder(lookup=folder_name, ignore_flow=True, project_key=dataiku.default_project_key())
+        folder_handle = project.create_managed_folder(name=self.config["raw_folder_name"], connection_name=celf.config["folder_conn"])
+        folder = dataiku.Folder(lookup=self.config["raw_folder_name"], ignore_flow=True, project_key=dataiku.default_project_key())
     return folder
 
 
