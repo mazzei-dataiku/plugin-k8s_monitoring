@@ -2,9 +2,9 @@ import pandas as pd
 import boto3
 
 
-def get_data(dt):
-    aws_region = config.aws_region
-    cluster_name = config.cluster_name
+def get_data(self, dt):
+    aws_region = self.config["aws_region"]
+    cluster_name = self.config["cluster_name"]
     
     eks = boto3.client("eks", region_name=aws_region)
     ec2 = boto3.client("ec2", region_name=aws_region)
