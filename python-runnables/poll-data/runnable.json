@@ -5,6 +5,7 @@
         "icon": "fas fa-stream"
     },
     "impersonate": false,
+    // ------------------- PARAMS ----------------------------------------------------------------------
     "params": [
         {
             "name": "sep1",
@@ -22,13 +23,14 @@
       ],
       "mandatory": true
   },
-        // AWS 
+        // ------------------- AWS ----------------------------------------------------------------------
           {
       "name": "aws_region",
       "label": "AWS Region",
       "type": "STRING",
       "visibilityCondition": "model.cluster_type == 'AWS'"
   },
+        // ------------------- GCP ----------------------------------------------------------------------
         {
   "type": "STRING",
   "name": "cluster_name",
@@ -37,6 +39,7 @@
             "mandatory": true
 }
     ],
+    // ------------------- RETURN ----------------------------------------------------------------------
     "permissions": [],
     "resultType": "HTML",
     "resultLabel": "Kubernetes Data Poll",
