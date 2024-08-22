@@ -38,3 +38,9 @@
 1. Select the Raw folder for input, and create a new folder for output
 1. **NOTE** Under the "Advanced Tab" you may need to disable "Container Configuration" depending on the DSS Setup
 1. Run
+
+## Review
+
+- From either folder, you can create datasets based off the folder paths. 
+
+[Example](./.images/flow_example.png)
