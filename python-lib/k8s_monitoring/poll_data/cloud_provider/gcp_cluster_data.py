@@ -3,9 +3,13 @@ from google.cloud import container_v1
 from googleapiclient import discovery
 
 def get_data(self, dt):
+    project_id = self.config["gcp_project_id"]
+    zone = self.config["gcp_zone"]
+    cluster_name = self.config["cluster_name"]
+    
     client = container_v1.ClusterManagerClient()
     service = discovery.build('compute', 'v1')
-    response = client.get_cluster(name=f'projects/{self.config["gcp_project_id"]}/locations/{self.config["gcp_zone"]}/clusters/{self.config["cluster_name"]}')
+    response = client.get_cluster(name=f'projects/{project_id}/locations/{zone}/clusters/{cluster_name}')
     data = [
         dt, project_id, zone,
         response.name,
