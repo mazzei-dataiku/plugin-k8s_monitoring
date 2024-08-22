@@ -29,5 +29,6 @@
         }
     ],
     "params": [],
+    "selectableFromFolder": "managed_folder_name"
     "resourceKeys": []
 }
