@@ -22,6 +22,13 @@
       ],
       "mandatory": true
   },
+        // AWS 
+          {
+      "name": "aws_region",
+      "label": "AWS Region",
+      "type": "STRING",
+      "visibilityCondition": "model.cluster_type == 'AWS'"
+  },
         {
   "type": "STRING",
   "name": "cluster_name",
