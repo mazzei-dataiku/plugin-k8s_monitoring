@@ -63,13 +63,15 @@ def cleanse_data(dt, input_folder, output_folder, partition):
     return True
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
+# Date Time
+dt = datetime.utcnow()
+
 # Input/Output Information
 input_folder = get_input_names_for_role('input_folder')
-output_folder = get_input_names_for_role('input_folder')
+output_folder = get_input_names_for_role('output_folder')
 
 
 
-dt = datetime.utcnow()
 r = cleanse_data(dt, input_folder, output_folder, "incoming|cluster_data")
 r = cleanse_data(dt, input_folder, output_folder, "incoming|nodegroup_data")
 r = cleanse_data(dt, input_folder, output_folder, "incoming|pod_status")
