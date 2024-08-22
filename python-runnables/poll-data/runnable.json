@@ -1,93 +1,86 @@
 {
-    "meta": {
-        "label": "Poll K8S Data",
-        "description": "Logic to connect to the local cluster and poll the data",
-        "icon": "fas fa-stream"
+  "meta": {
+    "label": "Poll K8S Data",
+    "description": "Logic to connect to the local cluster and poll the data",
+    "icon": "fas fa-stream"
+  },
+  "impersonate": false,
+  "params": [
+    {
+      "name": "sep1",
+      "label": "Cloud Provider",
+      "type": "SEPARATOR"
     },
-    "impersonate": false,
-    // ------------------- PARAMS ----------------------------------------------------------------------
-    "params": [
-        {
-            "name": "sep1",
-            "label": "Cloud Provider",
-            "type": "SEPARATOR"
-        },
-                {
-  "type": "STRING",
-  "name": "cluster_name",
-  "label": "K8S Cluster Name",
-  "defaultValue": "",
-            "mandatory": true
-},
-          {
+    {
+      "type": "STRING",
+      "name": "cluster_name",
+      "label": "K8S Cluster Name",
+      "defaultValue": "",
+      "mandatory": true
+    },
+    {
       "name": "cluster_type",
       "label": "Cluster Type",
       "type": "SELECT",
-      "selectChoices" : [
-          { "value": "AWS", "label": "AWS EKS"},
-          { "value": "AZURE", "label": "Azure AKS"},
-          { "value": "GCP", "label": "Google GKE"}
+      "selectChoices": [
+        {
+          "value": "AWS",
+          "label": "AWS EKS"
+        },
+        {
+          "value": "AZURE",
+          "label": "Azure AKS"
+        },
+        {
+          "value": "GCP",
+          "label": "Google GKE"
+        }
       ],
       "mandatory": true
-  },
-        // ------------------- AWS ----------------------------------------------------------------------
-          {
+    },
+    {
       "name": "aws_region",
       "label": "AWS Region",
       "type": "STRING",
-              "mandatory": true,
+      "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'AWS'"
-  },
-        // ------------------- GCP ----------------------------------------------------------------------
-        
-          {
+    },
+    {
       "name": "gcp_project_id",
       "label": "GCP Project ID",
       "type": "STRING",
-              "mandatory": true,
+      "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'GCP'"
-  },
-                  {
+    },
+    {
       "name": "gcp_zone",
       "label": "GCP Zone",
       "type": "STRING",
-                      "mandatory": true,
+      "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'GCP'"
-  },
-        // ------------------- Folder ----------------------------------------------------------------------
-        {
-            "name": "sep2",
-            "label": "Dataiku Folder Storage",
-            "type": "SEPARATOR"
-        },
-        {
+    },
+    {
+      "name": "sep2",
+      "label": "Dataiku Folder Storage",
+      "type": "SEPARATOR"
+    },
+    {
       "name": "folder_conn",
       "label": "Folder Connection",
       "type": "STRING",
-            "mandatory": true
-        },
-        {
+      "mandatory": true
+    },
+    {
       "name": "raw_folder_name",
       "label": "Raw K8S Data Folder Name",
       "type": "STRING",
-            "mandatory": true
-        }
-    ],
-    
-    // raw_folder_name = 'k8s_monitoring_raw'
-    // cleanse_folder_name = 'k8s_monitoring_cleanse'
-    // cleanse_folder_path = '' # Leave actually blank unless desired to change path
-    // file_ext = 'csv'
-    
-    
-    
-    
-    
-    // ------------------- RETURN ----------------------------------------------------------------------
-    "permissions": [],
-    "resultType": "HTML",
-    "resultLabel": "Kubernetes Data Poll",
-    "extension": "txt",
-    "mimeType": "text/plain",
-    "macroRoles": []
+      "mandatory": true
+    }
+  ],
+  "permissions": [],
+  "resultType": "HTML",
+  "resultLabel": "Kubernetes Data Poll",
+  "extension": "txt",
+  "mimeType": "text/plain",
+  "macroRoles": []
 }
