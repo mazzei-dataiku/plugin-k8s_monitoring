@@ -12,12 +12,13 @@
             "type": "SEPARATOR"
         },
           {
-      "name": "prediction_type",
-      "label": "Regression or Classification",
+      "name": "cluster_type",
+      "label": "Cluster Type",
       "type": "SELECT",
       "selectChoices" : [
-          { "value": "regression", "label": "Regression"},
-          { "value": "classification", "label": "Classification"}
+          { "value": "AWS", "label": "AWS EKS"},
+          { "value": "AZURE", "label": "Azure AKS"},
+          { "value": "GCP", "label": "Google GKE"}
       ],
       "mandatory": true
   }
