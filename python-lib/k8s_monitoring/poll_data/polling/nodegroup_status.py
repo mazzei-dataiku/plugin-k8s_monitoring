@@ -5,7 +5,7 @@ import datetime
 from kubernetes import client as k8s_client
 from kubernetes import config as k8s_config
 
-def get_data(dt, pods_df):
+def get_data(self, dt, pods_df):
     cluster_name = self.config["cluster_name"]
     data_dir = config.data_dir
     
