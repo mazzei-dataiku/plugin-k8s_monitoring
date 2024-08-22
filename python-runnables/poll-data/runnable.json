@@ -24,18 +24,9 @@
       "label": "Cluster Type",
       "type": "SELECT",
       "selectChoices": [
-        {
-          "value": "AWS",
-          "label": "AWS EKS"
-        },
-        {
-          "value": "AZURE",
-          "label": "Azure AKS"
-        },
-        {
-          "value": "GCP",
-          "label": "Google GKE"
-        }
+        {"value": "AWS", "label": "AWS EKS"},
+        {"value": "AZURE", "label": "Azure AKS"},
+        {"value": "GCP", "label": "Google GKE"}
       ],
       "mandatory": true
     },
