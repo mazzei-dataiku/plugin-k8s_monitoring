@@ -41,7 +41,7 @@ class MyRunnable(Runnable):
 
         # Node Status
         name = "nodegroup_status"
-        ngs_df = nodegroup_status.get_data(dt, pods_df)
+        ngs_df = nodegroup_status.get_data(self, dt, pods_df)
         helper.save_data_folder(dt, name, ngs_df, folder_name, folder_path)
 
         return "FINISH"
