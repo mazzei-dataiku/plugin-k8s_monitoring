@@ -9,6 +9,8 @@ from k8s_monitoring.cleanse_data import nodegroup_cleanse
 from datetime import datetime
 import pandas as pd
 
+
+# --------------------------------------------------------------------------------------------------------------------------------------------
 def cleanse_data(dt, input_folder, output_folder, partition):
     # get some values
     mode, data = partition.split("|")
@@ -60,11 +62,7 @@ def cleanse_data(dt, input_folder, output_folder, partition):
     
     return True
 
-
-
-
-
-
+# --------------------------------------------------------------------------------------------------------------------------------------------
 input_folder = get_input_names_for_role('input_folder')
 output_folder = get_input_names_for_role('input_folder')
 
