@@ -15,7 +15,7 @@ def poll_data(self):
     
     # Cluster Information
     name = "cluster_data"
-    cluster_df = cluster_data.get_data(dt)
+    cluster_df = cluster_data.get_data(self, dt)
     helper.save_data_folder(dt, name, cluster_df, folder_name, folder_path)
      
     # Nodegroup Information
