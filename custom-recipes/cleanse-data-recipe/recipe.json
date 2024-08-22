@@ -2,7 +2,8 @@
     "meta": {
         "label": "Cleanse K8S Data",
         "description": "Cleanse the K8S Raw data into a base layer",
-        "icon": "fas fa-broom"
+        "icon": "fas fa-broom",
+        "iconColor": "blue"
     },
     "kind": "PYTHON",
     "inputRoles": [
