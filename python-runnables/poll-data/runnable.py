@@ -21,28 +21,26 @@ class MyRunnable(Runnable):
     def run(self, progress_callback):
         # Load config variables
         dt = config.dt
-        folder_name = self.config["raw_folder_name"]
-        folder_path = config.raw_folder_path
 
         # Cluster Information
         name = "cluster_data"
         cluster_df = cluster_data.get_data(self, dt)
-        helper.save_data_folder(dt, name, cluster_df, folder_name, folder_path)
+        helper.save_data_folder(self, dt, name, cluster_df)
 
         # Nodegroup Information
         name = "nodegroup_data"
         nodegroup_df = nodegroup_data.get_data(self, dt)
-        helper.save_data_folder(dt, name, nodegroup_df, folder_name, folder_path)
+        helper.save_data_folder(self=, dt, name, nodegroup_df)
 
         # Pod Status
         name = "pod_status"
         pods_df = pod_status.get_data(self, dt)
-        helper.save_data_folder(dt, name, pods_df, folder_name, folder_path)   
+        helper.save_data_folder(self, dt, name, pods_df)   
 
         # Node Status
         name = "nodegroup_status"
         ngs_df = nodegroup_status.get_data(self, dt, pods_df)
-        helper.save_data_folder(dt, name, ngs_df, folder_name, folder_path)
+        helper.save_data_folder(self, dt, name, ngs_df)
 
         return "FINISH"
         
