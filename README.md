@@ -12,6 +12,8 @@
 
 ## How To
 
+### Poll Data
+
 1. Download/Install the plugin
 1. Create a new Dataiku Project (Code is written for UIF enabled or disabled)
 1. Create a new scenario
@@ -28,3 +30,11 @@
 1. Update the new folder in the flow for partitioning
     1. Add 2 "Dimensions" partions
     [Example](./.images/partitioning.png)
+
+### Cleanse Data
+
+1. From Recipe dropdown in flow, select "Kubernetes Monitoring"
+1. Select Cleanse K8S Data
+1. Select the Raw folder for input, and create a new folder for output
+1. **NOTE** Under the "Advanced Tab" you may need to disable "Container Configuration" depending on the DSS Setup
+1. Run
