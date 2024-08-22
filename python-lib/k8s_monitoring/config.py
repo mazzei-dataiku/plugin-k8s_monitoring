@@ -27,8 +27,7 @@ pod_cleansed_cols = [
 # File Folder save information
 raw_folder_path = 'incoming'
 file_ext = 'csv'
-cleanse_folder_name = 'k8s_monitoring_cleanse'
-cleanse_folder_path = '' # Leave actually blank unless desired to change path
+cleanse_folder_path = ''
 
 # --------------------------------------------------------------------------
 # EOF
