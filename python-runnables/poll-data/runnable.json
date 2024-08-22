@@ -38,6 +38,21 @@
       "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'AWS'"
     },
+    // ------------------- AZURE ----------------------------------------------------------------------
+    {
+      "name": "azure_sub_id",
+      "label": "Azure Subscription ID",
+      "type": "STRING",
+      "mandatory": true,
+      "visibilityCondition": "model.cluster_type == 'AZURE'"
+    },
+    {
+      "name": "azure_resource_grp",
+      "label": "Azure Resource Group",
+      "type": "STRING",
+      "mandatory": true,
+      "visibilityCondition": "model.cluster_type == 'AZURE'"
+    },
     // ------------------- GCP ----------------------------------------------------------------------
     {
       "name": "gcp_project_id",

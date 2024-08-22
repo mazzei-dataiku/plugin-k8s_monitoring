@@ -5,9 +5,9 @@ from azure.mgmt.compute import ComputeManagementClient
 
 
 def get_data(self, dt):
-    subscription_id = "82852abb-55ae-44d8-9bac-4632a4173215"
-    resource_group = 'cbutler-fm-rg'
-    cluster_name = 'mazzei-aks'
+    subscription_id = self.config["azure_sub_id"]
+    resource_group = self.config["azure_resource_grp"]
+    cluster_name = self.config["cluster_name"]
 
     credential = AzureCliCredential()
     container_client = ContainerServiceClient(credential,subscription_id)
