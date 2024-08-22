@@ -26,7 +26,8 @@
   "type": "STRING",
   "name": "cluster_name",
   "label": "K8S Cluster Name: ",
-  "defaultValue": "At any street corner the feeling of absurdity can strike any man in the face."
+  "defaultValue": "",
+            "mandatory": true
 }
     ],
     "permissions": [],
