@@ -40,15 +40,15 @@
         // ------------------- GCP ----------------------------------------------------------------------
           {
       "name": "gcp_project_id",
-      "label": "AWS Region",
+      "label": "GCP Project ID",
       "type": "STRING",
-      "visibilityCondition": "model.cluster_type == 'AWS'"
+      "visibilityCondition": "model.cluster_type == 'GCP'"
   },
                   {
       "name": "gcp_zone",
-      "label": "AWS Region",
+      "label": "GCP Zone",
       "type": "STRING",
-      "visibilityCondition": "model.cluster_type == 'AWS'"
+      "visibilityCondition": "model.cluster_type == 'GCP'"
   }
     ],
     // ------------------- RETURN ----------------------------------------------------------------------
