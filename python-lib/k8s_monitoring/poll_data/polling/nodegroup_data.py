@@ -7,7 +7,7 @@ def get_data(self, dt):
         return df
     
     elif cluster_type == "Azure":
-        return 123
+        raise Exception("Azure cluster has not been implemented yet.")
     
     elif cluster_type == "GCP":
         return 123
