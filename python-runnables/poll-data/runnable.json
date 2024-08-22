@@ -65,7 +65,7 @@
       "label": "Folder Connection",
       "type": "STRING",
             "mandatory": true
-        },
+        }
     ],
     
     // folder_conn = 'filesystem_folders'
