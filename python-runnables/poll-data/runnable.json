@@ -65,11 +65,15 @@
       "label": "Folder Connection",
       "type": "STRING",
             "mandatory": true
+        },
+        {
+      "name": "raw_folder_name",
+      "label": "Raw K8S Data Folder Name",
+      "type": "STRING",
+            "mandatory": true
         }
     ],
     
-    // folder_conn = 'filesystem_folders'
-    // raw_folder_path = 'incoming'
     // raw_folder_name = 'k8s_monitoring_raw'
     // cleanse_folder_name = 'k8s_monitoring_cleanse'
     // cleanse_folder_path = '' # Leave actually blank unless desired to change path
