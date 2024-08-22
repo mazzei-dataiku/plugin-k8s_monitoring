@@ -1,5 +1,3 @@
-from k8s_monitoring import config
-
 import pandas as pd
 import boto3
 
