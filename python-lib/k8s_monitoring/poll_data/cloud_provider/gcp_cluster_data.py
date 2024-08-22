@@ -5,7 +5,7 @@ from googleapiclient import discovery
 def get_data(self, dt):
     client = container_v1.ClusterManagerClient()
     service = discovery.build('compute', 'v1')
-    response = client.get_cluster(name=f'projects/{self.config["gcp_project_id"]}/locations/{self.config["zone"]}/clusters/{self.config["cluster"]}')
+    response = client.get_cluster(name=f'projects/{self.config["gcp_project_id"]}/locations/{self.config["gcp_zone"]}/clusters/{self.config["cluster_name"]}')
     data = [
         dt, project_id, zone,
         response.name,
