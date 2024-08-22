@@ -2,6 +2,10 @@
 boto3
 
 # Azure
+azure-identity
+azure-mgmt-containerservice
+azure-mgmt-kubernetesconfiguration
+azure-mgmt-resource
 azure-mgmt-storage
 azure-storage-blob
 
