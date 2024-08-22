@@ -9,7 +9,7 @@ def get_data(self, dt):
     
     # Make the connection
     client = container_v1.ClusterManagerClient()
-    response = client.get_cluster(name=f'projects/{project_id}/locations/{zone}/clusters/{cluster}')
+    response = client.get_cluster(name=f'projects/{project_id}/locations/{zone}/clusters/{cluster_name}')
 
     data = []
     for np in response.node_pools:
