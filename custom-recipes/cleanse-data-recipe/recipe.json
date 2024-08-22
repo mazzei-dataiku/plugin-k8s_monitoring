@@ -21,6 +21,7 @@
         {
             "name": "output_folder",
             "label": "Kubernetes Cleansed Folder",
+            "description": "Apples",
             "arity": "UNARY",
             "required": true,
             "acceptsDataset": false,
