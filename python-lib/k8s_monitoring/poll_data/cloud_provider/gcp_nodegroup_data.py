@@ -2,7 +2,8 @@ import pandas as pd
 from google.cloud import container_v1
 from google.cloud import compute
 
-def get_data(dt, project_id, zone, cluster):
+def get_data(self, dt):
+    project_id, zone, cluster
     # Make the connection
     client = container_v1.ClusterManagerClient()
     response = client.get_cluster(name=f'projects/{project_id}/locations/{zone}/clusters/{cluster}')
