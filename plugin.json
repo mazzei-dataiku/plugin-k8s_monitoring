@@ -16,7 +16,7 @@
         "author": "Stephen Mazzei",
 
         // icon: must be one of the FontAwesome 5.15.4 icons, complete list here at https://fontawesome.com/v5/docs/
-        "icon": "fs fa-dharmachakra",
+        "icon": "fass fa-dharmachakra",
 
         // List of tags for filtering the list of plugins
         "tags": ["K8S", "AWS", "AZURE", "GCP"], //for example: ["Machine Learning", "NLP"]
