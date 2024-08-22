@@ -2,7 +2,7 @@ import pandas as pd
 from google.cloud import container_v1
 from googleapiclient import discovery
 
-def get_data(dt, project_id, zone, cluster):
+def get_data(self, dt):
     client = container_v1.ClusterManagerClient()
     service = discovery.build('compute', 'v1')
     response = client.get_cluster(name=f'projects/{project_id}/locations/{zone}/clusters/{cluster}')
