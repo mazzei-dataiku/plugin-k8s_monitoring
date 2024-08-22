@@ -29,6 +29,7 @@
     1. Run Scenario
 1. Update the new folder in the flow for partitioning
     1. Add 2 "Dimensions" partions
+    
     ![Example](./.images/partitioning.png)
 
 ### Cleanse Data
