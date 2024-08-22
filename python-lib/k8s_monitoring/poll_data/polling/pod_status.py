@@ -6,7 +6,7 @@ from kubernetes import client as k8s_client
 from kubernetes import config as k8s_config
 
 
-def get_data(dt):
+def get_data(self, dt):
     cluster_name = config.cluster_name
     data_dir = config.data_dir
     
