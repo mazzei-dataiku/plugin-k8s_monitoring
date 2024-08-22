@@ -63,6 +63,7 @@ def cleanse_data(dt, input_folder, output_folder, partition):
     return True
 
 # --------------------------------------------------------------------------------------------------------------------------------------------
+# Input/Output Information
 input_folder = get_input_names_for_role('input_folder')
 output_folder = get_input_names_for_role('input_folder')
 
