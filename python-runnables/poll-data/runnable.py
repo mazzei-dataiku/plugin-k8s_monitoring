@@ -13,6 +13,6 @@ class MyRunnable(Runnable):
 
     def run(self, progress_callback):
         #return self.config["cluster_name"]
-        output = main.poll_data()
+        output = main.poll_data(self)
         return output
         
