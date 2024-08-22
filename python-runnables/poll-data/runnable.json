@@ -35,21 +35,37 @@
       "name": "aws_region",
       "label": "AWS Region",
       "type": "STRING",
+              "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'AWS'"
   },
         // ------------------- GCP ----------------------------------------------------------------------
+        
           {
       "name": "gcp_project_id",
       "label": "GCP Project ID",
       "type": "STRING",
+              "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'GCP'"
   },
                   {
       "name": "gcp_zone",
       "label": "GCP Zone",
       "type": "STRING",
+                      "mandatory": true,
       "visibilityCondition": "model.cluster_type == 'GCP'"
-  }
+  },
+        // ------------------- Folder ----------------------------------------------------------------------
+        {
+            "name": "sep2",
+            "label": "Dataiku Folder Storage",
+            "type": "SEPARATOR"
+        },
+        {
+      "name": "folder_conn",
+      "label": "Folder Connection",
+      "type": "STRING",
+            "mandatory": true
+        },
     ],
     
     // folder_conn = 'filesystem_folders'
