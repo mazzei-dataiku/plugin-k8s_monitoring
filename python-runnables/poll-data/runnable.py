@@ -36,7 +36,7 @@ class MyRunnable(Runnable):
 
         # Pod Status
         name = "pod_status"
-        pods_df = pod_status.get_data(dt)
+        pods_df = pod_status.get_data(self, dt)
         helper.save_data_folder(dt, name, pods_df, folder_name, folder_path)   
 
         # Node Status
