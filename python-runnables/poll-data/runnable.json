@@ -5,7 +5,13 @@
         "icon": "fas fa-stream"
     },
     "impersonate": false,
-    "params": [],
+    "params": [
+        {
+            "name": "sep1",
+            "label": "Authentication",
+            "type": "SEPARATOR"
+        }
+    ],
     "permissions": [],
     "resultType": "HTML",
     "resultLabel": "Kubernetes Data Poll",
