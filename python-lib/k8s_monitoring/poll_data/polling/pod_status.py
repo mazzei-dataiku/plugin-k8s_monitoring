@@ -76,10 +76,10 @@ def get_data(self, dt):
         # Performance Numbers
         t.append(limit_cpu)
         t.append(requests_cpu)
-        t.append(0)
+        t.append("0")
         t.append(limit_memory)
         t.append(requests_memory)
-        t.append(0)
+        t.append("0")
         t.append(i.spec.node_name)
         l.append(t)
     
