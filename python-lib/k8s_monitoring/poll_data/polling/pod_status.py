@@ -127,11 +127,6 @@ def get_data(self, dt):
     pods_df['pod_create_date'] = pods_df['pod_create_date'].dt.tz_localize(None)
     pods_df['pod_create_date'] = pods_df['pod_create_date'].dt.tz_localize('UTC')
     
-    # Forcing some other items
-    c = list(pods_df.columns)
-    c.remove('date_time')
-    c.remove('pod_create_date')
-    
     return pods_df
 
 # EOF
