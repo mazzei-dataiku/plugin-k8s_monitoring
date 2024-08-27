@@ -102,10 +102,10 @@ def get_data(self, dt):
     pods_df = pd.DataFrame(l, columns=columns)
     
     #   Add in pod Metrics
-    cust = k8s_client.CustomObjectsApi()
-    api_cust = cust.list_cluster_custom_object('metrics.k8s.io', 'v1beta1', 'pods') # All Pod Metrics
+    cust_objs = k8s_client.CustomObjectsApi()
+    list_cluster_cust_objs = cust_objs.list_cluster_custom_object('metrics.k8s.io', 'v1beta1', 'pods') # All Pod Metrics
 
-    for i in api_cust['items']:
+    for i in list_cluster_cust_objs['items']:
         pname = i['metadata']['name']
 
         # CPU Usage
