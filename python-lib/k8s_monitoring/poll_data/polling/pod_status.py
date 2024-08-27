@@ -31,13 +31,14 @@ def get_data(self, dt):
         pod_activity_id = None
         pod_job_id      = None
         labels = i.metadata.labels
-        dss_node_name   = labels.get('dataiku.com/dku-node-id',        None) # nodeid must be set in DATA_DIR/install.ini
-        project_key     = labels.get('dataiku.com/dku-project-key',    None)
-        pod_submitter   = labels.get('dataiku.com/dku-exec-submitter', None)
-        pod_exec_type   = labels.get('dataiku.com/dku-execution-type', None)
-        pod_exec_id     = labels.get('dataiku.com/dku-execution-id',   None)
-        pod_activity_id = labels.get('dataiku.com/dku-activity-id',    None)
-        pod_job_id      = labels.get('dataiku.com/dku-job-id',         None)
+        if labels:
+            dss_node_name   = labels.get('dataiku.com/dku-node-id',        None) # nodeid must be set in DATA_DIR/install.ini
+            project_key     = labels.get('dataiku.com/dku-project-key',    None)
+            pod_submitter   = labels.get('dataiku.com/dku-exec-submitter', None)
+            pod_exec_type   = labels.get('dataiku.com/dku-execution-type', None)
+            pod_exec_id     = labels.get('dataiku.com/dku-execution-id',   None)
+            pod_activity_id = labels.get('dataiku.com/dku-activity-id',    None)
+            pod_job_id      = labels.get('dataiku.com/dku-job-id',         None)
 
         t.append(dss_node_name)
         t.append(project_key)
