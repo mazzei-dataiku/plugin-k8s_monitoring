@@ -50,7 +50,7 @@ def cleanse(df):
     df.insert(1, "dt_month",  df["date_time"].dt.month)
     df.insert(1, "dt_year",   df["date_time"].dt.year)    
 
-    # Set columns
+    # Set numeric columns
     cols = [
         'pod_age_sec',
         'pod_cpu_limit', 'pod_cpu_request', 'pod_cpu_usage', 
