@@ -18,8 +18,6 @@ def cleanse(df):
     df["pod_ip"].fillna("Pending", inplace=True)
     df["k8s_node_name"].fillna("Pending", inplace=True)
     df["pod_cpu_limit"].fillna(-1, inplace=True)
-    df['dataiku_project_key'] = df['dataiku_project_key'].fillna(value="None")
-    df['dataiku_project_key'] = df['dataiku_project_key'].str.upper()
 
     # Cleanse CPU Values
     df['pod_cpu_limit']    = df['pod_cpu_limit'].apply(cleansing.cleanse_cpu)
