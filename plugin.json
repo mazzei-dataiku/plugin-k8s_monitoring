@@ -6,7 +6,7 @@
         "description": "Plugin designed to poll kubernetes logs (AWZ|Azure|GCP) and store Cluster, Nodegroup, Pods data. Recipe is available to then cleanse the raw data.",
         "author": "Stephen.Mazzei@dataiku.com",
         "icon": "fas fa-dharmachakra",
-        "tags": ["K8S", "AWS", "AZURE", "GCP"], //for example: ["Machine Learning", "NLP"]
+        "tags": ["K8S", "AWS", "AZURE", "GCP"],
         "url": "",
         "licenseInfo": "Apache Software License"
     }
