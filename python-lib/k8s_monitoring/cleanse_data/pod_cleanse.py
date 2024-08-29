@@ -48,11 +48,9 @@ def cleanse(df):
     df.insert(1, "dt_hour",   df["date_time"].dt.hour)
     df.insert(1, "dt_day",    df["date_time"].dt.day)
     df.insert(1, "dt_month",  df["date_time"].dt.month)
-    df.insert(1, "dt_year",   df["date_time"].dt.year)
+    df.insert(1, "dt_year",   df["date_time"].dt.year)    
 
-    # Minor Clean Up
-    
-
+    # Set columns
     cols = [
         'pod_age_sec',
         'pod_cpu_limit', 'pod_cpu_request', 'pod_cpu_usage', 
