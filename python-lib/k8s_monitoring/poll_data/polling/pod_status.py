@@ -106,10 +106,8 @@ def get_data(self, dt):
         'pod_activity_id', 'pod_job_id', 'pod_webapp_id', 
         'pod_analysis_id', 'pod_mltask_id', 'pod_ml_sess_id',
         'pod_apiD_infra_id', 'pod_apiD_serv_id', 'pod_apiD_depl_id',
-        'pod_ip',
-        'pod_phase',
-        'pod_create_date',
-        'pod_age_sec',
+        'pod_ip', 'pod_phase',
+        'pod_create_date', 'pod_age_sec',
         'pod_cpu_limit',    'pod_cpu_request',    'pod_cpu_usage',
         'pod_memory_limit', 'pod_memory_request', 'pod_memory_usage',
         'k8s_node_name'
