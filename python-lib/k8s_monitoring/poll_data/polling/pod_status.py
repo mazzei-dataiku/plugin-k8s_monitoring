@@ -51,6 +51,7 @@ def get_data(self, dt):
         t.append(project_key)
         t.append(pod_submitter)
         t.append(i.metadata.namespace)
+        t.append(i.metadata.name)
         t.append(pod_exec_type)
         t.append(pod_exec_id)
         t.append(pod_activity_id)
@@ -62,7 +63,6 @@ def get_data(self, dt):
         t.append(pod_apiD_infra_id)
         t.append(pod_apiD_serv_id)
         t.append(pod_apiD_depl_id)
-        t.append(i.metadata.name)
         t.append(i.status.pod_ip)
         t.append(i.status.phase)
         t.append(i.metadata.creation_timestamp)
@@ -103,6 +103,7 @@ def get_data(self, dt):
         'dss_node_name', 'dataiku_project_key', 
         'pod_submitter', 'pod_namespace',
         'pod_exec_type', 'pod_exec_id', 'pod_activity_id', 'pod_job_id',
+        
         'pod_full_name',
         'pod_ip',
         'pod_phase',
