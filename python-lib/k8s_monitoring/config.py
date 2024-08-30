@@ -19,8 +19,6 @@ pod_cleansed_cols = [
     'pod_exec_type', 'pod_exec_id', 'pod_activity_id', 'pod_job_id','pod_webapp_id',
     'pod_analysis_id', 'pod_mltask_id', 'pod_mltask_session_id',
     'pod_apideployer_infra_id', 'pod_apideployer_serv_id', 'pod_apideployer_depl_id',
-    
-    
     'pod_ip', 'pod_phase', 'pod_create_date', 'pod_age_sec',
     'pod_cpu_limit', 'pod_cpu_request', 'pod_cpu_usage', 'pod_cpu_percent',
     'pod_memory_limit', 'pod_memory_request', 'pod_memory_usage', 'pod_memory_percent',
