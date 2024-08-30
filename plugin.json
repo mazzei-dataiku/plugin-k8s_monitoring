@@ -1,6 +1,6 @@
 {
     "id": "k8s-monitoring",
-    "version": "2024.08.22",
+    "version": "2024.08.30",
     "meta": {
         "label": "Kubernetes Monitoring",
         "description": "Plugin designed to poll kubernetes logs (AWZ|Azure|GCP) and store Cluster, Nodegroup, Pods data. Recipe is available to then cleanse the raw data.",
