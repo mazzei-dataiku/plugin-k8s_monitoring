@@ -102,9 +102,10 @@ def get_data(self, dt):
         'date_time',
         'dss_node_name', 'dataiku_project_key', 
         'pod_submitter', 'pod_namespace',
-        'pod_exec_type', 'pod_exec_id', 'pod_activity_id', 'pod_job_id',
-        
-        'pod_full_name',
+        'pod_full_name', 'pod_exec_type', 'pod_exec_id', 
+        'pod_activity_id', 'pod_job_id', 'pod_webapp_id', 
+        'pod_analysis_id', 'pod_mltask_id', 'pod_ml_sess_id',
+        'pod_apiD_infra_id', 'pod_apiD_serv_id', 'pod_apiD_depl_id',
         'pod_ip',
         'pod_phase',
         'pod_create_date',
