@@ -33,6 +33,7 @@ def get_data(self, dt):
         labels = i.metadata.labels
         if labels:
             dss_node_name   = labels.get('dataiku.com/dku-node-id',        None) # nodeid must be set in DATA_DIR/install.ini
+            dss_node_name   = labels.get('dataiku.com/dku-install-id',        None) # nodeid must be set in DATA_DIR/install.ini
             project_key     = labels.get('dataiku.com/dku-project-key',    None)
             pod_submitter   = labels.get('dataiku.com/dku-exec-submitter', None)
             pod_exec_type   = labels.get('dataiku.com/dku-execution-type', None)
