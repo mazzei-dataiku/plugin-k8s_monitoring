@@ -68,7 +68,7 @@ def cleanse(df):
         df[c] = df[c].astype('float')
     
     # Correct column order just in-case
-    df = df[config.pod_cleansed_cols]
+    #df = df[config.pod_cleansed_cols]
     
     return df
 
