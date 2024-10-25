@@ -24,7 +24,7 @@
         - Cluster Type
         - Cloud Provider Information
             - This information will vary per AWS | Azure | GCP
-        - Folder Connection Type (Local/Cloud)
+        - Folder Connection Name (Example S3 Connection: my-bucket-value) (Local/Cloud)
         - Folder Name
     1. Run Scenario
 1. Update the new folder in the flow for partitioning
