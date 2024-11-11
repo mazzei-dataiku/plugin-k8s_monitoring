@@ -19,29 +19,33 @@ def get_data(self, dt):
     
         date_time = dt
         nodegroup_name = ng
-        nodegroup_instance_type = r['nodegroup']['instanceTypes']
-        nodegroup_AS_enabled = r['nodegroup']['capacityType']
-        nodegroup_desired_size = r['nodegroup']['scalingConfig']['desiredSize']
-        nodegroup_min_size = r['nodegroup']['scalingConfig']['minSize']
-        nodegroup_max_size = r['nodegroup']['scalingConfig']['maxSize']
-        instance_type_md = ec2.describe_instance_types(InstanceTypes=nodegroup_instance_type)
-        instance_desc = r['nodegroup']['amiType']
-        instance_cores = instance_type_md['InstanceTypes'][0]['VCpuInfo']['DefaultCores']
-        instance_memory = instance_type_md['InstanceTypes'][0]['MemoryInfo']['SizeInMiB']
-        print(r)
-        
-        try:
-            gpu_count = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["Count"]
-            gpu_cpu = 0
-            gpu_memory = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["MemoryInfo"]["SizeInMiB"]
-        except:
+        ng_info = r['nodegroup']
+        nodegroup_instance_type = ng_info.get('instanceTypes', None)
+        nodegroup_AS_enabled = ng_info.get('capacityType', None)
+        nodegroup_desired_size = ng_info.get('scalingConfig', None).get('desiredSize', 0)
+        nodegroup_min_size = ng_info.get('scalingConfig', None).get('minSize', 0)
+        nodegroup_max_size = ng_info.get('scalingConfig', None).get('maxSize', 0)
+        instance_desc = ng_info.get('amiType']
+        if nodegroup_instance_type:
+            instance_type_md = ec2.describe_instance_types(InstanceTypes=nodegroup_instance_type)
+            instance_cores = instance_type_md['InstanceTypes'][0]['VCpuInfo']['DefaultCores']
+            instance_memory = instance_type_md['InstanceTypes'][0]['MemoryInfo']['SizeInMiB']
+            try:
+                gpu_count = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["Count"]
+                gpu_cpu = 0
+                gpu_memory = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["MemoryInfo"]["SizeInMiB"]
+            except:
+                gpu_count = 0
+                gpu_cpu = 0
+                gpu_memory = 0
+        else:
+            instance_cores = 0
+            instance_memory = 0
             gpu_count = 0
             gpu_cpu = 0
             gpu_memory = 0
-        #instance_price = 1.0080
-        #if gpu_count > 0:
-        #    instance_price = 0.5260
         
+        # Get all the temp values
         t = [
             dt,
             nodegroup_name, nodegroup_instance_type,
@@ -49,9 +53,10 @@ def get_data(self, dt):
             instance_desc, instance_cores, instance_memory, gpu_count, gpu_cpu, gpu_memory
         ]
         
+        # Add to the main data list
         data.append(t)
     
-    
+    # Build the Dataframe
     cols = [
         "date_time",
         "nodegroup_name", "nodegroup_instance_type",
