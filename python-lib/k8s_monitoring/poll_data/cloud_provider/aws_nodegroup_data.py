@@ -28,6 +28,7 @@ def get_data(self, dt):
         instance_desc = r['nodegroup']['amiType']
         instance_cores = instance_type_md['InstanceTypes'][0]['VCpuInfo']['DefaultCores']
         instance_memory = instance_type_md['InstanceTypes'][0]['MemoryInfo']['SizeInMiB']
+        print(r)
         
         try:
             gpu_count = instance_type_md["InstanceTypes"][0]["GpuInfo"]["Gpus"][0]["Count"]
