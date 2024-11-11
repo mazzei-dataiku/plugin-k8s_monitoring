@@ -10,7 +10,7 @@ def get_data(self, dt):
     ec2 = boto3.client("ec2", region_name=aws_region)
     
     data = []
-    ngs = eks.list_nodegroups(clusterName=cluster_name)
+    ngs = eks.list_nodegroups(clusterName=cluster_name)["nodegroups"]
     for ng in ngs:
         try:
             r = eks.describe_nodegroup(clusterName=cluster_name, nodegroupName=ng)
