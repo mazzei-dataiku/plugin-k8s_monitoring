@@ -6,6 +6,7 @@ import io
 
 def get_folder(self):
     client = dataiku.api_client()
+    
     project = client.get_default_project()
     folder = dataiku.Folder(lookup=self.config["raw_folder_name"], project_key=dataiku.default_project_key(), ignore_flow=True)
     try:
