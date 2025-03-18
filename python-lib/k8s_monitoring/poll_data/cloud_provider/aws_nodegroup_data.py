@@ -25,7 +25,7 @@ def get_data(self, dt):
         nodegroup_desired_size = ng_info.get('scalingConfig', None).get('desiredSize', 0)
         nodegroup_min_size = ng_info.get('scalingConfig', None).get('minSize', 0)
         nodegroup_max_size = ng_info.get('scalingConfig', None).get('maxSize', 0)
-        instance_desc = ng_info.get('amiType']
+        instance_desc = ng_info.get('amiType')
         if nodegroup_instance_type:
             instance_type_md = ec2.describe_instance_types(InstanceTypes=nodegroup_instance_type)
             instance_cores = instance_type_md['InstanceTypes'][0]['VCpuInfo']['DefaultCores']
